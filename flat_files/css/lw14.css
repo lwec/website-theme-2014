@@ -62,7 +62,7 @@ dl {
   line-height: 1.5;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 iframe {
   max-width: 100%;
@@ -106,16 +106,16 @@ iframe {
 .lw14-landing-intro {
   letter-spacing: .05em;
   text-align: center;
-  background: #fafbfc url('../img/landing-intro-bg.jpg') no-repeat scroll -150px bottom;
+  background: #fafbfc url('../img/landing-intro-bg.jpg') no-repeat scroll -100px bottom;
   background-size: cover;
 }
 .lw14-landing-intro-title {
-  font-family: 'Georgia';
-  font-size: 2.4em;
+  font-family: 'montserratregular';
+  font-size: 2em;
+  text-transform: uppercase;
 }
 .lw14-landing-intro-text {
   margin-bottom: 1em;
-  font-size: 1.2em;
 }
 .lw14-landing-intro-text:last-child {
   margin-bottom: 0;
@@ -147,10 +147,10 @@ iframe {
   margin-bottom: 0;
 }
 .lw14-landing-about-closing {
-  margin-top: 2em;
+  margin-top: 4em;
 }
 .lw14-landing-about-closing-text {
-  font-size: 1.2em;
+  font-size: 1.125em;
   letter-spacing: 2px;
 }
 .lw14-landing-location {
@@ -183,12 +183,9 @@ iframe {
   background-color: #3a3a3a;
   color: #fafbfc;
 }
-@media only screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
+@media only screen and (min-width: 40.063em) {
   .row {
-    max-width: 960px;
+    max-width: 600px;
   }
   .column,
   .columns {
@@ -207,22 +204,31 @@ iframe {
     background-position: left bottom;
     background-size: contain;
   }
-  .lw14-landing-about-closing {
-    margin-left: 128px;
-    text-indent: -128px;
+  .lw14-landing-intro-title {
+    font-size: 2.4em;
+  }
+  .lw14-landing-intro-text {
+    font-size: 1.2em;
+  }
+  .lw14-landing-about-closing-text {
+    letter-spacing: .1em;
+    margin-left: 5.95em;
+    text-indent: -5.95em;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64.063em) {
   html {
     font-size: 20px;
+  }
+  .row {
+    max-width: 960px;
   }
   .lw14-landing-intro {
     min-height: 90%;
     background-position: left bottom;
     background-size: contain;
   }
-  .lw14-landing-about-closing {
-    margin-left: 143px;
-    text-indent: -143px;
+  .lw14-landing-about-closing-text {
+    font-size: 1.2em;
   }
 }
