@@ -1,0 +1,646 @@
+@font-face {
+  font-family: 'IconicStroke';
+  src: url('iconic_stroke.eot');
+  src: url('iconic_stroke.eot?#iefix') format('embedded-opentype'), url('iconic_stroke.ttf') format('truetype'), url('iconic_stroke.svg#iconic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.iconic {
+  display: inline-block;
+  font-family: 'IconicStroke';
+}
+.iconic-lightbulb:before {
+  content: '\e063';
+}
+.iconic-equalizer:before {
+  content: '\e052';
+}
+.iconic-map-pin-stroke:before {
+  content: '\e068';
+}
+.iconic-brush-alt:before {
+  content: '\e01c';
+}
+.iconic-move:before {
+  content: '\e03e';
+}
+.iconic-paperclip:before {
+  content: '\e08a';
+}
+.iconic-pen-alt-stroke:before {
+  content: '\e005';
+}
+.iconic-move-vertical:before {
+  content: '\e03b';
+}
+.iconic-book-alt2:before {
+  content: '\e06a';
+}
+.iconic-layers:before {
+  content: '\e01f';
+}
+.iconic-pause:before {
+  content: '\e049';
+}
+.iconic-layers-alt:before {
+  content: '\e020';
+}
+.iconic-cloud-upload:before {
+  content: '\e045';
+}
+.iconic-chart-alt:before {
+  content: '\e029';
+}
+.iconic-fullscreen-exit-alt:before {
+  content: '\e051';
+}
+.iconic-cloud-download:before {
+  content: '\e044';
+}
+.iconic-comment-alt2-stroke:before {
+  content: '\e004';
+}
+.iconic-mail:before {
+  content: '\2709';
+}
+.iconic-check-alt:before {
+  content: '\2718';
+}
+.iconic-document-stroke:before {
+  content: '\e066';
+}
+.iconic-battery-charging:before {
+  content: '\e05d';
+}
+.iconic-stop:before {
+  content: '\e04a';
+}
+.iconic-arrow-up:before {
+  content: '\2191';
+}
+.iconic-move-horizontal:before {
+  content: '\e038';
+}
+.iconic-compass:before {
+  content: '\e021';
+}
+.iconic-minus-alt:before {
+  content: '\e009';
+}
+.iconic-battery-empty:before {
+  content: '\e05c';
+}
+.iconic-map-pin-alt:before {
+  content: '\e002';
+}
+.iconic-unlock-stroke:before {
+  content: '\e076';
+}
+.iconic-lock-stroke:before {
+  content: '\e075';
+}
+.iconic-question-mark:before {
+  content: '\003f';
+}
+.iconic-list:before {
+  content: '\e055';
+}
+.iconic-upload:before {
+  content: '\e043';
+}
+.iconic-reload:before {
+  content: '\e030';
+}
+.iconic-loop-alt4:before {
+  content: '\e035';
+}
+.iconic-loop-alt3:before {
+  content: '\e034';
+}
+.iconic-loop-alt2:before {
+  content: '\e033';
+}
+.iconic-loop-alt1:before {
+  content: '\e032';
+}
+.iconic-left-quote:before {
+  content: '\275d';
+}
+.iconic-x:before {
+  content: '\2713';
+}
+.iconic-last:before {
+  content: '\e04d';
+}
+.iconic-document-alt-stroke:before {
+  content: '\e000';
+}
+.iconic-bars:before {
+  content: '\e06f';
+}
+.iconic-arrow-left:before {
+  content: '\2190';
+}
+.iconic-arrow-down:before {
+  content: '\2193';
+}
+.iconic-download:before {
+  content: '\e042';
+}
+.iconic-home:before {
+  content: '\2302';
+}
+.iconic-calendar:before {
+  content: '\e001';
+}
+.iconic-right-quote-alt:before {
+  content: '\e012';
+}
+.iconic-fullscreen:before {
+  content: '\e04e';
+}
+.iconic-dial:before {
+  content: '\e058';
+}
+.iconic-plus-alt:before {
+  content: '\e008';
+}
+.iconic-clock:before {
+  content: '\e079';
+}
+.iconic-movie:before {
+  content: '\e060';
+}
+.iconic-steering-wheel:before {
+  content: '\e024';
+}
+.iconic-pen:before {
+  content: '\270e';
+}
+.iconic-tag-stroke:before {
+  content: '\e02b';
+}
+.iconic-pin:before {
+  content: '\e067';
+}
+.iconic-denied:before {
+  content: '\26d4';
+}
+.iconic-left-quote-alt:before {
+  content: '\e011';
+}
+.iconic-volume-mute:before {
+  content: '\e071';
+}
+.iconic-arrow-up-alt2:before {
+  content: '\e018';
+}
+.iconic-list-nested:before {
+  content: '\e056';
+}
+.iconic-arrow-up-alt1:before {
+  content: '\e014';
+}
+.iconic-comment-stroke:before {
+  content: '\e06d';
+}
+.iconic-undo:before {
+  content: '\e02f';
+}
+.iconic-umbrella:before {
+  content: '\2602';
+}
+.iconic-bolt:before {
+  content: '\26a1';
+}
+.iconic-article:before {
+  content: '\e053';
+}
+.iconic-read-more:before {
+  content: '\e054';
+}
+.iconic-beaker:before {
+  content: '\e023';
+}
+.iconic-beaker-alt:before {
+  content: '\e010';
+}
+.iconic-battery-full:before {
+  content: '\e073';
+}
+.iconic-arrow-right:before {
+  content: '\2192';
+}
+.iconic-new-window:before {
+  content: '\e059';
+}
+.iconic-plus:before {
+  content: '\2795';
+}
+.iconic-cog:before {
+  content: '\2699';
+}
+.iconic-key-stroke:before {
+  content: '\26bf';
+}
+.iconic-first:before {
+  content: '\e04c';
+}
+.iconic-comment-alt1-stroke:before {
+  content: '\e003';
+}
+.iconic-trash-stroke:before {
+  content: '\e05a';
+}
+.iconic-image:before {
+  content: '\e027';
+}
+.iconic-chat-alt-stroke:before {
+  content: '\e007';
+}
+.iconic-cd:before {
+  content: '\e064';
+}
+.iconic-right-quote:before {
+  content: '\275e';
+}
+.iconic-brush:before {
+  content: '\e01b';
+}
+.iconic-cloud:before {
+  content: '\2601';
+}
+.iconic-eye:before {
+  content: '\e025';
+}
+.iconic-play-alt:before {
+  content: '\e048';
+}
+.iconic-transfer:before {
+  content: '\e041';
+}
+.iconic-pen-alt2:before {
+  content: '\e006';
+}
+.iconic-camera:before {
+  content: '\e070';
+}
+.iconic-move-horizontal-alt2:before {
+  content: '\e03a';
+}
+.iconic-curved-arrow:before {
+  content: '\2935';
+}
+.iconic-move-horizontal-alt1:before {
+  content: '\e039';
+}
+.iconic-aperture:before {
+  content: '\e026';
+}
+.iconic-reload-alt:before {
+  content: '\e031';
+}
+.iconic-magnifying-glass:before {
+  content: '\e074';
+}
+.iconic-iphone:before {
+  content: '\e06e';
+}
+.iconic-fork:before {
+  content: '\e046';
+}
+.iconic-box:before {
+  content: '\e06b';
+}
+.iconic-bars-alt:before {
+  content: '\e00a';
+}
+.iconic-heart-stroke:before {
+  content: '\2764';
+}
+.iconic-volume:before {
+  content: '\e072';
+}
+.iconic-x-alt:before {
+  content: '\2714';
+}
+.iconic-link:before {
+  content: '\e077';
+}
+.iconic-moon-stroke:before {
+  content: '\263e';
+}
+.iconic-eyedropper:before {
+  content: '\e01e';
+}
+.iconic-spin:before {
+  content: '\e036';
+}
+.iconic-rss:before {
+  content: '\e02c';
+}
+.iconic-info:before {
+  content: '\2139';
+}
+.iconic-target:before {
+  content: '\e02a';
+}
+.iconic-cursor:before {
+  content: '\e057';
+}
+.iconic-minus:before {
+  content: '\2796';
+}
+.iconic-book-alt:before {
+  content: '\e00b';
+}
+.iconic-headphones:before {
+  content: '\e061';
+}
+.iconic-hash:before {
+  content: '\0023';
+}
+.iconic-arrow-left-alt1:before {
+  content: '\e013';
+}
+.iconic-arrow-left-alt2:before {
+  content: '\e017';
+}
+.iconic-fullscreen-exit:before {
+  content: '\e050';
+}
+.iconic-share:before {
+  content: '\e02e';
+}
+.iconic-fullscreen-alt:before {
+  content: '\e04f';
+}
+.iconic-at:before {
+  content: '\0040';
+}
+.iconic-chat:before {
+  content: '\e05e';
+}
+.iconic-move-vertical-alt2:before {
+  content: '\e03d';
+}
+.iconic-move-vertical-alt1:before {
+  content: '\e03c';
+}
+.iconic-check:before {
+  content: '\2717';
+}
+.iconic-mic:before {
+  content: '\e05f';
+}
+.iconic-calendar-alt-stroke:before {
+  content: '\e06c';
+}
+.iconic-book:before {
+  content: '\e069';
+}
+.iconic-move-alt1:before {
+  content: '\e03f';
+}
+.iconic-move-alt2:before {
+  content: '\e040';
+}
+.iconic-award-stroke:before {
+  content: '\e022';
+}
+.iconic-wrench:before {
+  content: '\e078';
+}
+.iconic-play:before {
+  content: '\e047';
+}
+.iconic-star:before {
+  content: '\2605';
+}
+.iconic-chart:before {
+  content: '\e028';
+}
+.iconic-rain:before {
+  content: '\26c6';
+}
+.iconic-folder-stroke:before {
+  content: '\e065';
+}
+.iconic-sun-stroke:before {
+  content: '\2600';
+}
+.iconic-user:before {
+  content: '\e062';
+}
+.iconic-battery-half:before {
+  content: '\e05b';
+}
+.iconic-aperture-alt:before {
+  content: '\e00c';
+}
+.iconic-eject:before {
+  content: '\e04b';
+}
+.iconic-arrow-down-alt1:before {
+  content: '\e016';
+}
+.iconic-pilcrow:before {
+  content: '\00b6';
+}
+.iconic-arrow-down-alt2:before {
+  content: '\e01a';
+}
+.iconic-arrow-right-alt1:before {
+  content: '\e015';
+}
+.iconic-arrow-right-alt2:before {
+  content: '\e019';
+}
+.iconic-rss-alt:before {
+  content: '\e02d';
+}
+.iconic-spin-alt:before {
+  content: '\e037';
+}
+@font-face {
+  font-family: 'IconicStroke';
+  src: url('../fonts/iconic_stroke.eot');
+  src: url('../fonts/iconic_stroke.eot?#iefix') format('embedded-opentype'), url('../fonts/iconic_stroke.ttf') format('truetype'), url('../fonts/iconic_stroke.svg#iconic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserratbold';
+  src: url('../fonts/montserrat-bold-webfont.eot');
+  src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-bold-webfont.woff') format('woff'), url('../fonts/montserrat-bold-webfont.ttf') format('truetype'), url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserratregular';
+  src: url('../fonts/montserrat-regular-webfont.eot');
+  src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-regular-webfont.woff') format('woff'), url('../fonts/montserrat-regular-webfont.ttf') format('truetype'), url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pt_serifbold';
+  src: url('../fonts/pt_serif-web-bold-webfont.eot');
+  src: url('../fonts/pt_serif-web-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/pt_serif-web-bold-webfont.woff') format('woff'), url('../fonts/pt_serif-web-bold-webfont.ttf') format('truetype'), url('../fonts/pt_serif-web-bold-webfont.svg#pt_serifbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pt_serifbold_italic';
+  src: url('../fonts/pt_serif-web-bolditalic-webfont.eot');
+  src: url('../fonts/pt_serif-web-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/pt_serif-web-bolditalic-webfont.woff') format('woff'), url('../fonts/pt_serif-web-bolditalic-webfont.ttf') format('truetype'), url('../fonts/pt_serif-web-bolditalic-webfont.svg#pt_serifbold_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pt_serifitalic';
+  src: url('../fonts/pt_serif-web-italic-webfont.eot');
+  src: url('../fonts/pt_serif-web-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/pt_serif-web-italic-webfont.woff') format('woff'), url('../fonts/pt_serif-web-italic-webfont.ttf') format('truetype'), url('../fonts/pt_serif-web-italic-webfont.svg#pt_serifitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pt_serifregular';
+  src: url('../fonts/pt_serif-web-regular-webfont.eot');
+  src: url('../fonts/pt_serif-web-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/pt_serif-web-regular-webfont.woff') format('woff'), url('../fonts/pt_serif-web-regular-webfont.ttf') format('truetype'), url('../fonts/pt_serif-web-regular-webfont.svg#pt_serifregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 1.25em;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  line-height: 1;
+}
+.row {
+  max-width: 960px;
+}
+iframe {
+  max-width: 100%;
+}
+.lw14 {
+  color: #545454;
+  font-family: 'pt_serifregular';
+}
+.lw14-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+.lw14-landing-intro,
+.lw14-landing-location,
+.lw14-landing-about,
+.lw14-landing-ministries,
+.lw14-landing-staff {
+  min-height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.lw14-landing-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+.lw14-landing-subtitle {
+  margin-bottom: 10px;
+  font-family: 'montserratregular';
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.lw14-landing-sub-subtitle {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.lw14-landing-intro {
+  min-height: 90%;
+  padding-top: 150px;
+  text-align: center;
+  background: #fafbfc url('../img/landing-intro-bg.jpg') no-repeat scroll left bottom;
+  background-size: contain;
+}
+.lw14-landing-intro-title {
+  font-family: 'Georgia';
+  font-size: 48px;
+  letter-spacing: .05em;
+}
+.lw14-landing-intro-text {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 1;
+}
+.lw14-landing-intro-text:last-child {
+  margin-bottom: 0;
+}
+.lw14-landing-intro-scrolldown {
+  font-size: 40px;
+  margin-top: 40px;
+}
+.lw14-landing-about-pic {
+  margin-top: 20px;
+  width: 295px;
+  max-width: 100%;
+  height: 295px;
+  background: url('http://placehold.it/600x600') no-repeat scroll center center;
+  border-radius: 100%;
+}
+.lw14-landing-about-closing {
+  margin-top: 50px;
+  margin-left: 130px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: .1em;
+  text-indent: -130px;
+}
+.lw14-landing-ministries {
+  background-color: #3a3a3a;
+  color: #fafbfc;
+}
+.lw14-landing-location {
+  background-color: #d5f2ff;
+}
+.lw14-landing-location-title {
+  font-family: 'pt_serifitalic';
+  line-height: 1.2;
+}
+.lw14-landing-location-map-text {
+  margin-top: 10px;
+  text-align: center;
+}
+.lw14-landing-location-text {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.lw14-landing-location-logistics-rooms {
+  padding-top: 10px;
+}
+.lw14-landing-location-rooms-lists {
+  padding-top: 10px;
+}
+.lw14-landing-location-rooms-ministry,
+.lw14-landing-location-rooms-room {
+  margin: 0;
+  list-style-type: none;
+}
+.lw14-landing-staff {
+  background-color: #fafbfc;
+}
