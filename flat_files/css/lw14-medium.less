@@ -1,0 +1,28 @@
+@media only screen and ( min-width: 768px ) {
+
+// foundation overrides
+html { font-size: 18px; } // 1.125em = 18px, 1.25 = 20px
+.row { max-width: 960px; }
+.column, .columns { padding-left: 2em; padding-right: 2em; }
+
+// landing page
+.lw14-landing {
+	&-intro, &-location, &-about, &-ministries, &-staff {
+		min-height: 100%;
+	}
+}
+
+.lw14-landing-intro {
+	min-height: 90%;
+	background-position: left bottom;
+	background-size: contain;
+}
+
+.lw14-landing-about {
+	&-closing {
+		margin-left: 128px;
+		text-indent: -128px;
+	}
+}
+
+}
