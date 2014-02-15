@@ -2,8 +2,7 @@
 
 // foundation overrides
 // html { font-size: 18px; } // 1.125em = 18px, 1.25 = 20px
-.row { max-width: 600px; }
-.column, .columns { padding-left: 2em; padding-right: 2em; }
+// .column, .columns { padding-left: 2em; padding-right: 2em; }
 
 // landing page
 .lw14-landing {
@@ -13,20 +12,25 @@
 }
 
 .lw14-landing-intro {
+	.row { max-width: 600px; }
+
 	min-height: 90%;
 	background-position: left bottom;
 	background-size: contain;
-
-	&-title { font-size: 2.4em; }
-	&-text { font-size: 1.2em; }
 }
 
 .lw14-landing-about {
+	.row { max-width: 600px; }
+
 	&-closing-text {
 		letter-spacing: .1em;
 		margin-left: 5.95em;
 		text-indent: -5.95em;
 	}
+}
+
+.lw14-landing-ministries {
+	&-subtitle, &-text { text-align: left; }
 }
 
 }

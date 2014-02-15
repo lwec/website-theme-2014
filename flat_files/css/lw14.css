@@ -61,6 +61,10 @@ ol,
 dl {
   line-height: 1.5;
 }
+.row {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 html {
   font-size: 16px;
 }
@@ -86,17 +90,22 @@ iframe {
 .lw14-landing-about,
 .lw14-landing-ministries,
 .lw14-landing-staff {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 5em;
+}
+.lw14-landing-intro-title,
+.lw14-landing-about-title {
+  padding-top: 92px;
 }
 .lw14-landing-title {
   margin-bottom: 1em;
   font-size: 2em;
+  letter-spacing: 0.05em;
 }
 .lw14-landing-subtitle {
   margin-bottom: 0.5em;
   font-family: 'montserratregular';
   font-size: 1.5em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .lw14-landing-sub-subtitle {
@@ -104,7 +113,7 @@ iframe {
   font-size: 1.2em;
 }
 .lw14-landing-intro {
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-align: center;
   background: #fafbfc url('../img/landing-intro-bg.jpg') no-repeat scroll -100px bottom;
   background-size: cover;
@@ -127,20 +136,19 @@ iframe {
 .lw14-landing-about {
   color: #fafbfc;
   font-family: 'pt_serifitalic';
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   background: #3a3a3a url('../img/landing-about-bg.jpg') no-repeat scroll center top;
   background-size: cover;
 }
 .lw14-landing-about-title {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 .lw14-landing-about-list {
-  margin: 0;
+  margin: 0 0 0 0.95em;
   list-style-type: none;
 }
 .lw14-landing-about-list-item {
   margin-bottom: 1em;
-  margin-left: .95em;
   text-indent: -0.95em;
 }
 .lw14-landing-about-list-item:last-child {
@@ -150,8 +158,27 @@ iframe {
   margin-top: 4em;
 }
 .lw14-landing-about-closing-text {
+  margin-bottom: 0;
   font-size: 1.125em;
   letter-spacing: 2px;
+}
+.lw14-landing-ministries {
+  padding-bottom: 4em;
+  text-align: center;
+}
+.lw14-landing-ministries-title {
+  padding-top: 94px;
+  margin-bottom: 38px;
+  font-size: 1.5em;
+}
+.lw14-landing-ministries-list {
+  margin-left: auto;
+  margin-right: auto;
+}
+.lw14-landing-ministries-subtitle {
+  margin-top: 1em;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 .lw14-landing-location {
   background-color: #d5f2ff;
@@ -184,14 +211,6 @@ iframe {
   color: #fafbfc;
 }
 @media only screen and (min-width: 40.063em) {
-  .row {
-    max-width: 600px;
-  }
-  .column,
-  .columns {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
   .lw14-landing-intro,
   .lw14-landing-location,
   .lw14-landing-about,
@@ -204,31 +223,56 @@ iframe {
     background-position: left bottom;
     background-size: contain;
   }
-  .lw14-landing-intro-title {
-    font-size: 2.4em;
+  .lw14-landing-intro .row {
+    max-width: 600px;
   }
-  .lw14-landing-intro-text {
-    font-size: 1.2em;
+  .lw14-landing-about .row {
+    max-width: 600px;
   }
   .lw14-landing-about-closing-text {
     letter-spacing: .1em;
     margin-left: 5.95em;
     text-indent: -5.95em;
   }
+  .lw14-landing-ministries-subtitle,
+  .lw14-landing-ministries-text {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  html {
+    zoom: 1.1;
+  }
 }
 @media only screen and (min-width: 64.063em) {
   html {
     font-size: 20px;
   }
-  .row {
-    max-width: 960px;
+  .lw14-landing-intro-title,
+  .lw14-landing-about-title {
+    padding-top: 88px;
   }
   .lw14-landing-intro {
     min-height: 90%;
     background-position: left bottom;
     background-size: contain;
   }
+  .lw14-landing-intro .row {
+    max-width: 880px;
+  }
+  .lw14-landing-intro-title {
+    font-size: 2.4em;
+  }
+  .lw14-landing-intro-text {
+    font-size: 1.2em;
+  }
+  .lw14-landing-about .row {
+    max-width: 880px;
+  }
   .lw14-landing-about-closing-text {
     font-size: 1.2em;
+  }
+  .lw14-landing-ministries-title {
+    padding-top: 92px;
   }
 }

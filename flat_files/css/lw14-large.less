@@ -1,26 +1,43 @@
+@media only screen and ( min-width: 1400px ) {
+	html { zoom: 1.1; }
+}
+
 @media only screen and ( min-width: 64.063em ) {
 
 // foundation overrides
 html { font-size: 20px; }
-.row { max-width: 960px; }
 
 // landing page
 .lw14-landing {
-	
+	&-intro-title,
+	&-about-title {
+		padding-top: 88px; // 50px nav + 50px padding needed = 100px. but the line height makes up for some of that 2nd 50px.
+	}
 }
 
 .lw14-landing-intro {
+	.row { max-width: 880px; }
+
 	min-height: 90%;
 	background-position: left bottom;
 	background-size: contain;
+
+	&-title { font-size: 2.4em; }
+	&-text { font-size: 1.2em; }
 }
 
 .lw14-landing-about {
+	.row { max-width: 880px; }
+
 	&-closing-text {
 		font-size: 1.2em;
 		// margin-left: 143px;
 		// text-indent: -143px;
 	}
+}
+
+.lw14-landing-ministries {
+	&-title { padding-top: 92px; }
 }
 
 }
