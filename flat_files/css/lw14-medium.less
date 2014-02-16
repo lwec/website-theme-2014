@@ -6,22 +6,20 @@
 
 // landing page
 .lw14-landing {
-	&-intro, &-location, &-about, &-ministries, &-staff {
+	&-intro, &-visitors, &-about, &-ministries, &-staff {
 		min-height: 100%;
+	}
+
+	&-intro, &-about, &-visitors, &-staff {
+		.row { max-width: 600px; }
 	}
 }
 
 .lw14-landing-intro {
-	.row { max-width: 600px; }
-
 	min-height: 90%;
-	background-position: left bottom;
-	background-size: contain;
 }
 
 .lw14-landing-about {
-	.row { max-width: 600px; }
-
 	&-closing-text {
 		letter-spacing: .1em;
 		margin-left: 5.95em;
@@ -31,6 +29,15 @@
 
 .lw14-landing-ministries {
 	&-subtitle, &-text { text-align: left; }
+}
+
+.lw14-landing-staff {
+	text-align: left;
+
+	&-photo {
+		width: 155px;
+		height: 155px;
+	}
 }
 
 }

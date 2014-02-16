@@ -4,7 +4,7 @@
 @img_dir: '../img';
 @bg-light: #fafbfc;
 @bg-light-rgba: rgba( 250, 251, 252, 0.95 );
-@bg-blue: #d5f2ff;
+@bg-blue: #e0f5ff;
 @bg-dark: #3a3a3a;
 @default-text: #545454;
 
@@ -12,14 +12,16 @@
 html, body { height: 100%; }
 h1, h2, h3, h4, h5, h6 { margin: 0 0 0.5em 0; color: inherit; font-family: inherit; line-height: 1.5; }
 p, ul, ol, dl { line-height: 1.5; }
+p { font-size: 1em; }
 .row { padding-left: 1em; padding-right: 1em; }
 
 // global styles
 html { font-size: 16px; }
 iframe { max-width: 100%; }
-.lw14 { color: @default-text; font-family: 'pt_serifregular'; }
+.lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-light; }
 
 .lw14-nav {
+	display: none;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -32,35 +34,38 @@ iframe { max-width: 100%; }
 
 // landing page
 .lw14-landing {
-	&-intro, &-location, &-about, &-ministries, &-staff { padding-bottom: 5em; }
+	&-intro, &-visitors, &-about, &-ministries, &-staff { padding-bottom: 5em; }
 
-	&-intro-title,
-	&-about-title {
-		padding-top: 92px; // 50px nav + 50px padding needed = 100px. but the line height makes up for some of that 2nd 50px.
+	&-about, &-visitors, &-staff {
+		padding-top: 100px;
+
+		&-title { line-height: 1; }
 	}
 
 	&-title {
 		margin-bottom: 1em;
+		font-family: 'pt_serifitalic';
 		font-size: 2em;
 		letter-spacing: 0.05em;
 	}
 	&-subtitle {
-		margin-bottom: 0.5em;
+		margin-bottom: 1em;
 		font-family: 'montserratregular';
-		font-size: 1.5em;
-		letter-spacing: 0.05em;
+		font-size: 1em;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
 	}
-	&-sub-subtitle { margin-bottom: 1em; font-size: 1.2em; }
 }
 
 .lw14-landing-intro {
 	letter-spacing: 0.05em;
 	text-align: center;
-	background: @bg-light url( '@{img_dir}/landing-intro-bg.jpg' ) no-repeat scroll -100px bottom;
+	background: @bg-light url( '@{img_dir}/landing-intro-bg.jpg' ) no-repeat scroll left bottom;
 	background-size: cover;
 
 	&-title {
+		padding-top: 92px; // 50px nav + 50px padding needed = 100px. but the line height makes up for some of that 2nd 50px.
+		margin-bottom: 0.25em; // takes into account the extra 4px from the line height of the subtext + the extra 8px at the bottom of the title text.
 		font-family: 'montserratregular';
 		font-size: 2em;
 		text-transform: uppercase;
@@ -74,17 +79,22 @@ iframe { max-width: 100%; }
 	color: @bg-light;
 	font-family: 'pt_serifitalic';
 	letter-spacing: 0.05em;
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.8 ); // makes the text stand out more (too thin w/out it)
+	-webkit-font-smoothing: antialiased;
 
 	background: @bg-dark url( '@{img_dir}/landing-about-bg.jpg' ) no-repeat scroll center top;
 	background-size: cover;
 
-	&-title { letter-spacing: 0.1em; }
+	&-title {
+		margin-bottom: 0.625em;
+		letter-spacing: 0.1em;
+	}
 
 	&-list { margin: 0 0 0 0.95em; list-style-type: none; }
 	&-list-item { margin-bottom: 1em; text-indent: -0.95em; }
 	&-list-item:last-child { margin-bottom: 0; }
 
-	&-closing { margin-top: 4em; }
+	&-closing { margin-top: 2.45em; } // 60px total
 	&-closing-text { margin-bottom:0; font-size: 1.125em; letter-spacing: 2px; } // 1.125em = 18px
 }
 
@@ -95,31 +105,47 @@ iframe { max-width: 100%; }
 	&-title {
 		padding-top: 94px;
 		margin-bottom: 38px;
-
 		font-size: 1.5em;
 	}
 
-	&-list { margin-left: auto; margin-right: auto; }
-	&-subtitle { margin-top: 1em; margin-bottom: 20px; line-height: 1; }
+	&-columns { padding-left: 0; padding-right: 0; }
+	&-list { margin: 0 auto; }
+	& &-list-item { padding-left: 1em; padding-right: 1em; }
+
+	&-subtitle { margin-top: 1em; margin-bottom: 0.5em; line-height: 1; }
 	// &-text { margin-bottom: 0; }
 }
 
-.lw14-landing-location {
-	background-color: @bg-blue;
+.lw14-landing-visitors {
+	background: @bg-blue url( '@{img_dir}/landing-visitors-bg.jpg' ) no-repeat scroll center bottom;
+	background-size: cover;
 
-	&-title { font-family: 'pt_serifitalic'; line-height: 1.2; }
+	&-title, &-subtitle, &-text { margin-bottom: 0; }
 
-	&-map-text { margin-top: 10px; text-align: center; }
-	&-text { margin-top: 10px; margin-bottom: 30px; }
-
-	&-logistics-rooms { padding-top: 10px; }
-	&-rooms-lists { padding-top: 10px; }
-	&-rooms-ministry, &-rooms-room { margin: 0; list-style-type: none; }
+	&-title {  }
+	&-subtitle { margin-top: 2em; }
+	&-text { }
 }
 
 .lw14-landing-staff {
-	background-color: @bg-dark;
-	color: @bg-light;
+	text-align: center;
+
+	&-title { margin-bottom: 0; }
+
+
+	&-member { margin-top: 3em; }
+	&-photo-frame { text-align: center; }
+	&-photo {
+		display: inline-block;
+		width: 240px;
+		height: 240px;
+		max-width: 100%;
+		border-radius: 100%;
+		background: url( 'http://placehold.it/800x800' ) no-repeat scroll left top;
+		background-size: contain;
+	}
+	&-name { margin-top: 1em; margin-bottom: 0.5em; line-height: 1; }
+	&-text { margin-bottom: 0; }
 }
 
 @import 'lw14-medium.less';
