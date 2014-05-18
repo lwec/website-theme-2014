@@ -8,10 +8,10 @@ Runs off of Foundation 5.
 ## Foundation 5 Customization
 
 ### Colors
-**Primary:** #0099ff
-**Secondary:** #fafbfc
-**Body:** #454545
-**Header:** #222
+* **Primary:** #0099ff
+* **Secondary:** #fafbfc
+* **Body:** #454545
+* **Header:** #222
 
 ### Grid
 * Grid

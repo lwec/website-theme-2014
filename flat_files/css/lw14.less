@@ -10,6 +10,7 @@
 
 // foundation overrides
 html, body { height: 100%; }
+body { cursor: auto; }
 h1, h2, h3, h4, h5, h6 { margin: 0 0 0.5em 0; color: inherit; font-family: inherit; line-height: 1.5; }
 p, ul, ol, dl { line-height: 1.5; }
 p { font-size: 1em; }
@@ -58,9 +59,11 @@ iframe { max-width: 100%; }
 }
 
 .lw14-landing-intro {
-	letter-spacing: 0.05em;
+	color: @bg-light; 
 	text-align: center;
-	background: @bg-light url( '@{img_dir}/landing-intro-bg.jpg' ) no-repeat scroll left bottom;
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.8 );
+	-webkit-font-smoothing: antialiased;
+	background: @bg-light url( '@{img_dir}/landing-intro-bg-2-mobile.jpg' ) no-repeat scroll center top;
 	background-size: cover;
 
 	&-title {
@@ -68,6 +71,7 @@ iframe { max-width: 100%; }
 		margin-bottom: 0.25em; // takes into account the extra 4px from the line height of the subtext + the extra 8px at the bottom of the title text.
 		font-family: 'montserratregular';
 		font-size: 2em;
+		letter-spacing: 0.05em;
 		text-transform: uppercase;
 	}
 	&-text { margin-bottom: 1em; }

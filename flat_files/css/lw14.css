@@ -44,6 +44,9 @@ html,
 body {
   height: 100%;
 }
+body {
+  cursor: auto;
+}
 h1,
 h2,
 h3,
@@ -121,9 +124,11 @@ iframe {
   text-transform: uppercase;
 }
 .lw14-landing-intro {
-  letter-spacing: 0.05em;
+  color: #fafbfc;
   text-align: center;
-  background: #fafbfc url('../img/landing-intro-bg.jpg') no-repeat scroll left bottom;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: antialiased;
+  background: #fafbfc url('../img/landing-intro-bg-2-mobile.jpg') no-repeat scroll center top;
   background-size: cover;
 }
 .lw14-landing-intro-title {
@@ -131,6 +136,7 @@ iframe {
   margin-bottom: 0.25em;
   font-family: 'montserratregular';
   font-size: 2em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .lw14-landing-intro-text {
@@ -292,6 +298,7 @@ iframe {
   }
   .lw14-landing-intro {
     min-height: 90%;
+    background-image: url('../img/landing-intro-bg-2.jpg');
   }
   .lw14-landing-intro-title {
     padding-top: 88px;
