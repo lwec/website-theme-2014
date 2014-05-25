@@ -5,7 +5,7 @@
 @bg-light: #fafbfc;
 @bg-light-rgba: rgba( 250, 251, 252, 0.95 );
 @bg-blue: #e0f5ff;
-@bg-dark: #3a3a3a;
+@bg-dark: #3d3d3d;
 @default-text: #545454;
 
 // foundation overrides
@@ -63,7 +63,7 @@ iframe { max-width: 100%; }
 	text-align: center;
 	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.8 );
 	-webkit-font-smoothing: antialiased;
-	background: @bg-light url( '@{img_dir}/landing-intro-bg-2-mobile.jpg' ) no-repeat scroll center top;
+	background: @bg-light url( '@{img_dir}/landing-intro-bg-2-mobile.jpg' ) no-repeat scroll center center;
 	background-size: cover;
 
 	&-title {
@@ -86,7 +86,7 @@ iframe { max-width: 100%; }
 	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.8 ); // makes the text stand out more (too thin w/out it)
 	-webkit-font-smoothing: antialiased;
 
-	background: @bg-dark url( '@{img_dir}/landing-about-bg.jpg' ) no-repeat scroll center top;
+	background: @bg-dark url( '@{img_dir}/landing-about-bg-2.jpg' ) no-repeat scroll center top;
 	background-size: cover;
 
 	&-title {
@@ -104,7 +104,11 @@ iframe { max-width: 100%; }
 
 .lw14-landing-ministries {
 	padding-bottom: 4em; // as opposed to 5em, because the paragraphs have a margin
+	color: @bg-light;
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.8 ); // makes the text stand out more (too thin w/out it)
 	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	background: @bg-light url( '@{img_dir}/landing-ministries-bg-mobile.jpg' ) no-repeat scroll center center;
 
 	&-title {
 		padding-top: 94px;
