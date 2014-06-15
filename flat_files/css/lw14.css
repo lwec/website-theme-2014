@@ -107,6 +107,7 @@ p {
 }
 .top-bar-section ul li > a {
   display: inline-block;
+  font-family: inherit;
 }
 .top-bar-section ul li.active > a {
   font-size: inherit;
@@ -187,7 +188,7 @@ iframe {
 .lw14-landing-intro {
   color: #fafbfc;
   text-align: center;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   -webkit-font-smoothing: antialiased;
   background: #fafbfc url('../img/landing-intro-bg-2-mobile.jpg') no-repeat scroll center center;
   background-size: cover;
@@ -214,7 +215,7 @@ iframe {
   color: #fafbfc;
   font-family: 'pt_serifitalic';
   letter-spacing: 0.05em;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   -webkit-font-smoothing: antialiased;
   background: #3d3d3d url('../img/landing-about-bg-2.jpg') no-repeat scroll center top;
   background-size: cover;
