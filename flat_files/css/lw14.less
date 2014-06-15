@@ -1,36 +1,66 @@
 @import 'lw14-includes.less';
 
 // variables
+@nav-height: 60px;
 @img_dir: '../img';
 @bg-light: #fafbfc;
 @bg-light-rgba: rgba( 250, 251, 252, 0.95 );
 @bg-blue: #e0f5ff;
 @bg-dark: #3d3d3d;
+@bg-nav: #222;
 @default-text: #545454;
 
 // foundation overrides
-html, body { height: 100%; }
 body { cursor: auto; }
 h1, h2, h3, h4, h5, h6 { margin: 0 0 0.5em 0; color: inherit; font-family: inherit; line-height: 1.5; }
 p, ul, ol, dl { line-height: 1.5; }
 p { font-size: 1em; }
 .row { padding-left: 1em; padding-right: 1em; }
 
-// global styles
-html { font-size: 16px; }
-iframe { max-width: 100%; }
-.lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-light; }
+// foundation menu overrides
+.top-bar { height: @nav-height; line-height: @nav-height; }
+.top-bar.expanded { background: #222; background: rgba( 17, 17, 17, 0.9 ); }
+.top-bar.expanded .title-area { background: transparent; }
+.top-bar .name { height: @nav-height; }
+.top-bar .name h1 { padding-top: 10px; }
+.top-bar .name h1 a { display: inline-block; width: 53px; height: 40px; padding: 0; }
+.top-bar .toggle-topbar a { font-size: inherit; }
+.top-bar-section li:not(.has-form) a:not(.button) { display: inline; padding: 0 0 4px; background: inherit; }
+.top-bar-section li:not(.has-form) a:not(.button):hover { background: inherit; }
+.top-bar-section ul { font-size: inherit; background: inherit; }
+.top-bar-section ul li > a { display: inline-block; }
+.top-bar-section ul li.active > a { font-size: inherit; }
+.top-bar-section ul li.active > a:hover {  }
 
+// global styles
+html, body { height: 100%; }
+html { height: 100%; font-size: 16px; }
+iframe { max-width: 100%; }
+.lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-nav; }
+
+.lw14-nav-container { background: @bg-nav; background: rgba( 17, 17, 17, 0.9 ); }
 .lw14-nav {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	background: @bg-light;
-	background: @bg-light-rgba;
+	background: transparent;
+	font-family: 'montserratregular';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	-webkit-font-smoothing: antialiased;
+
+	&-logo {
+		text-indent: -9999px;
+		background: transparent url( '@{img_dir}/menu-logo.png' ) no-repeat scroll center center;
+	}
+
+	&-menu-item { line-height: @nav-height; }
+	&-menu-item-link:hover { border-bottom: 1px solid @bg-light; }
+}
+
+.lw14-footer {
+	padding: 1em 0;
+
+	color: @bg-light;
+	-webkit-font-smoothing: antialiased;
+	background: @bg-nav;
 }
 
 // landing page
@@ -104,11 +134,8 @@ iframe { max-width: 100%; }
 
 .lw14-landing-ministries {
 	padding-bottom: 4em; // as opposed to 5em, because the paragraphs have a margin
-	color: @bg-light;
-	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.8 ); // makes the text stand out more (too thin w/out it)
 	text-align: center;
-	-webkit-font-smoothing: antialiased;
-	background: @bg-light url( '@{img_dir}/landing-ministries-bg-mobile.jpg' ) no-repeat scroll center center;
+	background: @bg-light;
 
 	&-title {
 		padding-top: 94px;
@@ -136,6 +163,8 @@ iframe { max-width: 100%; }
 }
 
 .lw14-landing-staff {
+	background: @bg-light;
+
 	text-align: center;
 
 	&-title { margin-bottom: 0; }

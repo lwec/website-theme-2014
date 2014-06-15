@@ -4,13 +4,21 @@
 // html { font-size: 18px; } // 1.125em = 18px, 1.25 = 20px
 // .column, .columns { padding-left: 2em; padding-right: 2em; }
 
+// all pages
+.lw14-nav-menu-item {
+	padding: 0 1em;
+
+	&:first-child { padding-left: 0; }
+	&:last-child { padding-right: 0; }
+}
+
 // landing page
 .lw14-landing {
 	&-intro, &-visitors, &-about, &-ministries, &-staff {
 		min-height: 100%;
 	}
 
-	&-intro, &-about, &-visitors, &-staff {
+	&-intro, &-about, &-ministries, &-visitors, &-staff {
 		.row { max-width: 600px; }
 	}
 }

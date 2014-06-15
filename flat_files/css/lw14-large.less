@@ -7,9 +7,14 @@
 // foundation overrides
 html { font-size: 20px; }
 
+// all pages
+.lw14-nav {
+	// .row { max-width: 870px; }
+}
+
 // landing page
 .lw14-landing {
-	&-intro, &-about, &-visitors, &-staff {
+	&-intro, &-about, &-ministries, &-visitors, &-staff {
 		.row { max-width: 870px; }
 	}
 }
@@ -20,7 +25,7 @@ html { font-size: 20px; }
 	background-position: center center;
 
 	&-title {
-		padding-top: 88px; // 50px nav + 50px padding needed = 100px. but the line height makes up for some of that 2nd 50px.
+		padding-top: 88px; // 100px padding needed. but the line height makes up for some of that.
 		margin-bottom: 0.375em; // accounts for the extra 6px from the line height of the subtext.
 		font-size: 2.4em;
 	}
@@ -38,8 +43,6 @@ html { font-size: 20px; }
 }
 
 .lw14-landing-ministries {
-	background: @bg-light url( '@{img_dir}/landing-ministries-bg.jpg' ) no-repeat scroll center center;
-
 	&-title { padding-top: 92px; }
 
 	& &-list-item { padding-right: 1em; padding-bottom: 0; padding-left: 1em; }
