@@ -3,15 +3,14 @@ Living Water 2014 Theme
 
 Theme files for the lwechurch website.
 
-Runs off of Foundation 5.
+Runs off of Bootstrap 3.3.1.
 
-## Foundation 5 Customization
+## Bootstrap Customization (To-Do!)
 
 ### Colors
 * **Primary:** #0099ff
 * **Secondary:** #fafbfc
-* **Body:** #454545
-* **Header:** #222
+* **Body:** #3d3d3d
 
 ### Grid
 * Grid

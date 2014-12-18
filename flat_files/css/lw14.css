@@ -40,9 +40,6 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
-  cursor: auto;
-}
 h1,
 h2,
 h3,
@@ -60,12 +57,10 @@ ol,
 dl {
   line-height: 1.5;
 }
-p {
-  font-size: 1em;
-}
-.row {
-  padding-left: 1em;
-  padding-right: 1em;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background: transparent;
 }
 .top-bar {
   height: 60px;
@@ -118,10 +113,15 @@ body {
 }
 html {
   height: 100%;
+}
+body {
   font-size: 16px;
 }
 iframe {
   max-width: 100%;
+}
+p {
+  text-rendering: optimizelegibility;
 }
 .lw14 {
   color: #545454;
@@ -129,7 +129,6 @@ iframe {
   background: #222222;
 }
 .lw14-nav-container {
-  background: #222222;
   background: rgba(17, 17, 17, 0.9);
 }
 .lw14-nav {
@@ -138,6 +137,7 @@ iframe {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .lw14-nav-logo {
   text-indent: -9999px;
@@ -146,13 +146,17 @@ iframe {
 .lw14-nav-menu-item {
   line-height: 60px;
 }
+.lw14-nav-menu-item-link {
+  transition: text-shadow 300ms;
+}
 .lw14-nav-menu-item-link:hover {
-  border-bottom: 1px solid #fafbfc;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 .lw14-footer {
   padding: 1em 0;
   color: #fafbfc;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: #222222;
 }
 .lw14-landing-intro,
@@ -181,7 +185,7 @@ iframe {
 .lw14-landing-subtitle {
   margin-bottom: 1em;
   font-family: 'montserratregular';
-  font-size: 1em;
+  font-size: 1.2em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -190,6 +194,7 @@ iframe {
   text-align: center;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: #fafbfc url('../img/landing-intro-bg-2-mobile.jpg') no-repeat scroll center center;
   background-size: cover;
 }
@@ -217,6 +222,7 @@ iframe {
   letter-spacing: 0.05em;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: #3d3d3d url('../img/landing-about-bg-2.jpg') no-repeat scroll center top;
   background-size: cover;
 }
@@ -253,21 +259,42 @@ iframe {
   margin-bottom: 38px;
   font-size: 1.5em;
 }
-.lw14-landing-ministries-columns {
-  padding-left: 0;
-  padding-right: 0;
+.lw14-landing-ministries-ministry {
+  padding-bottom: 1em;
 }
-.lw14-landing-ministries-list {
-  margin: 0 auto;
+.lw14-landing-ministries-ministry-container {
+  height: 350px;
+  padding: 1em;
+  position: relative;
 }
-.lw14-landing-ministries .lw14-landing-ministries-list-item {
-  padding-left: 1em;
-  padding-right: 1em;
+.lw14-landing-ministries-ministry-container-english {
+  background: url('http://placehold.it/800x800') no-repeat scroll center center;
+}
+.lw14-landing-ministries-ministry-container-chinese {
+  background: url('http://placehold.it/800x800') no-repeat scroll center center;
+}
+.lw14-landing-ministries-ministry-container-youth {
+  background: url('http://placehold.it/800x800') no-repeat scroll center center;
+}
+.lw14-landing-ministries-ministry-container-children {
+  background: url('http://placehold.it/800x800') no-repeat scroll center center;
+}
+.lw14-landing-ministries-ministry-content {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  margin-right: 1em;
+  color: #fafbfc;
+  font-size: 80%;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .lw14-landing-ministries-subtitle {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  line-height: 1;
+  margin-bottom: 0;
+}
+.lw14-landing-ministries-text {
+  margin-bottom: 0;
 }
 .lw14-landing-visitors {
   background: #e0f5ff url('../img/landing-visitors-bg.jpg') no-repeat scroll center bottom;
@@ -328,11 +355,11 @@ iframe {
   .lw14-landing-staff {
     min-height: 100%;
   }
-  .lw14-landing-intro .row,
-  .lw14-landing-about .row,
-  .lw14-landing-ministries .row,
-  .lw14-landing-visitors .row,
-  .lw14-landing-staff .row {
+  .lw14-landing-intro .container,
+  .lw14-landing-about .container,
+  .lw14-landing-ministries .container,
+  .lw14-landing-visitors .container,
+  .lw14-landing-staff .container {
     max-width: 600px;
   }
   .lw14-landing-intro {
@@ -343,10 +370,6 @@ iframe {
     letter-spacing: .1em;
     margin-left: 5.95em;
     text-indent: -5.95em;
-  }
-  .lw14-landing-ministries-subtitle,
-  .lw14-landing-ministries-text {
-    text-align: left;
   }
   .lw14-landing-staff {
     text-align: left;
@@ -362,14 +385,14 @@ iframe {
   }
 }
 @media only screen and (min-width: 64.063em) {
-  html {
+  body {
     font-size: 20px;
   }
-  .lw14-landing-intro .row,
-  .lw14-landing-about .row,
-  .lw14-landing-ministries .row,
-  .lw14-landing-visitors .row,
-  .lw14-landing-staff .row {
+  .lw14-landing-intro .container,
+  .lw14-landing-about .container,
+  .lw14-landing-ministries .container,
+  .lw14-landing-visitors .container,
+  .lw14-landing-staff .container {
     max-width: 870px;
   }
   .lw14-landing-intro {
@@ -394,17 +417,8 @@ iframe {
   .lw14-landing-ministries-title {
     padding-top: 92px;
   }
-  .lw14-landing-ministries .lw14-landing-ministries-list-item {
-    padding-right: 1em;
-    padding-bottom: 0;
-    padding-left: 1em;
-  }
   .lw14-landing-ministries-list-item-content {
     font-size: 80%;
-  }
-  .lw14-landing-ministries-subtitle,
-  .lw14-landing-ministries-text {
-    text-align: center;
   }
   .lw14-landing-staff-photo {
     width: 230px;
