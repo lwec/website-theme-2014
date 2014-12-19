@@ -1,10 +1,4 @@
-@media only screen and ( min-width: 1400px ) {
-	html { zoom: 1.1; }
-}
-
-@media only screen and ( min-width: 64.063em ) {
-
-body { font-size: 20px; }
+@media only screen and ( min-width: 1200px ) {
 
 // all pages
 .lw14-nav {
@@ -14,7 +8,7 @@ body { font-size: 20px; }
 // landing page
 .lw14-landing {
 	&-intro, &-about, &-ministries, &-visitors, &-staff {
-		.container { max-width: 870px; }
+		// .container { max-width: 870px; }
 	}
 }
 
@@ -23,12 +17,9 @@ body { font-size: 20px; }
 	background-image: url( '@{img_dir}/landing-intro-bg-2.jpg' );
 	background-position: center center;
 
-	&-title {
-		padding-top: 88px; // 100px padding needed. but the line height makes up for some of that.
-		margin-bottom: 0.375em; // accounts for the extra 6px from the line height of the subtext.
-		font-size: 2.4em;
+	h1 {
+		font-size: 48px;
 	}
-	&-text { font-size: 1.2em; }
 }
 
 .lw14-landing-about {
@@ -36,25 +27,17 @@ body { font-size: 20px; }
 
 	&-closing-text {
 		font-size: 1.2em;
-		// margin-left: 143px;
-		// text-indent: -143px;
 	}
 }
 
 .lw14-landing-ministries {
 	&-title { padding-top: 92px; }
-
-	// & &-list-item { padding-right: 1em; padding-left: 1em; }
-
-	&-list-item-content { font-size: 80%; } // 20px => 16px
-
-	// &-subtitle, &-text { text-align: center; }
 }
 
 .lw14-landing-staff {
 	&-photo {
-		width: 230px;
-		height: 230px;
+		width: 260px;
+		height: 260px;
 	}
 }
 

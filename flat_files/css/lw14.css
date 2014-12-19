@@ -46,10 +46,16 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.5em 0;
-  color: inherit;
-  font-family: inherit;
   line-height: 1.5;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 0.9em;
 }
 p,
 ul,
@@ -61,51 +67,6 @@ dl {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   background: transparent;
-}
-.top-bar {
-  height: 60px;
-  line-height: 60px;
-}
-.top-bar.expanded {
-  background: #222;
-  background: rgba(17, 17, 17, 0.9);
-}
-.top-bar.expanded .title-area {
-  background: transparent;
-}
-.top-bar .name {
-  height: 60px;
-}
-.top-bar .name h1 {
-  padding-top: 10px;
-}
-.top-bar .name h1 a {
-  display: inline-block;
-  width: 53px;
-  height: 40px;
-  padding: 0;
-}
-.top-bar .toggle-topbar a {
-  font-size: inherit;
-}
-.top-bar-section li:not(.has-form) a:not(.button) {
-  display: inline;
-  padding: 0 0 4px;
-  background: inherit;
-}
-.top-bar-section li:not(.has-form) a:not(.button):hover {
-  background: inherit;
-}
-.top-bar-section ul {
-  font-size: inherit;
-  background: inherit;
-}
-.top-bar-section ul li > a {
-  display: inline-block;
-  font-family: inherit;
-}
-.top-bar-section ul li.active > a {
-  font-size: inherit;
 }
 html,
 body {
@@ -137,8 +98,8 @@ p {
 .lw14-nav {
   background: transparent;
   font-family: 'montserratregular';
-  text-transform: uppercase;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -146,17 +107,34 @@ p {
   text-indent: -9999px;
   background: transparent url('../img/menu-logo.png') no-repeat scroll center center;
 }
-.lw14-nav-menu-item {
-  line-height: 60px;
-}
 .lw14-nav-menu-item-link {
   transition: text-shadow 300ms;
 }
 .lw14-nav-menu-item-link:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
+.lw14-landing-intro,
+.lw14-events-intro {
+  margin-bottom: 0;
+}
+.lw14-landing-intro h1,
+.lw14-events-intro h1 {
+  font-size: 40px;
+  font-family: 'montserratregular';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.lw14-landing-intro p,
+.lw14-events-intro p {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+.lw14-landing-intro p:last-child,
+.lw14-events-intro p:last-child {
+  margin-bottom: 0;
+}
 .lw14-footer {
-  padding: 1em 0;
+  padding: 40px 0;
   color: #fafbfc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -167,12 +145,12 @@ p {
 .lw14-landing-about,
 .lw14-landing-ministries,
 .lw14-landing-staff {
-  padding-bottom: 5em;
+  padding-bottom: 80px;
 }
 .lw14-landing-about,
 .lw14-landing-visitors,
 .lw14-landing-staff {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .lw14-landing-about-title,
 .lw14-landing-visitors-title,
@@ -180,17 +158,15 @@ p {
   line-height: 1;
 }
 .lw14-landing-title {
-  margin-bottom: 1em;
   font-family: 'pt_serifitalic';
-  font-size: 2em;
+  font-size: 40px;
   letter-spacing: 0.05em;
 }
 .lw14-landing-subtitle {
-  margin-bottom: 1em;
   font-family: 'montserratregular';
-  font-size: 1.1em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-size: 1.1em;
 }
 .lw14-landing-intro {
   color: #fafbfc;
@@ -203,21 +179,7 @@ p {
 }
 .lw14-landing-intro-title {
   padding-top: 92px;
-  margin-bottom: 0.25em;
-  font-family: 'montserratregular';
-  font-size: 2em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.lw14-landing-intro-text {
-  margin-bottom: 1em;
-}
-.lw14-landing-intro-text:last-child {
-  margin-bottom: 0;
-}
-.lw14-landing-intro-scrolldown {
-  font-size: 2em;
-  margin-top: 2em;
+  margin-bottom: 15px;
 }
 .lw14-landing-about {
   color: #fafbfc;
@@ -230,30 +192,33 @@ p {
   background-size: cover;
 }
 .lw14-landing-about-title {
-  margin-bottom: 0.625em;
+  margin-bottom: 25px;
   letter-spacing: 0.1em;
 }
 .lw14-landing-about-list {
-  margin: 0 0 0 0.95em;
+  margin: 0 0 0 15px;
+  padding-left: 0;
   list-style-type: none;
 }
 .lw14-landing-about-list-item {
-  margin-bottom: 1em;
-  text-indent: -0.95em;
+  margin-bottom: 15px;
+  text-indent: -15px;
 }
 .lw14-landing-about-list-item:last-child {
   margin-bottom: 0;
 }
 .lw14-landing-about-closing {
-  margin-top: 2.45em;
+  margin-top: 40px;
 }
 .lw14-landing-about-closing-text {
   margin-bottom: 0;
+  margin-left: 105px;
   font-size: 1.125em;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
+  text-indent: -105px;
 }
 .lw14-landing-ministries {
-  padding-bottom: 4em;
+  padding-bottom: 60px;
   text-align: center;
   background: #fafbfc;
 }
@@ -263,37 +228,35 @@ p {
   font-size: 1.5em;
 }
 .lw14-landing-ministries-ministry {
-  padding-bottom: 1em;
+  padding-bottom: 30px;
 }
 .lw14-landing-ministries-ministry-container {
-  height: 350px;
-  padding: 1em;
-  position: relative;
+  padding: 40px;
 }
 .lw14-landing-ministries-ministry-container-english {
-  background: url('http://placehold.it/800x800') no-repeat scroll center center;
+  background: url('../img/landing-ministries-bg-echo.jpg') no-repeat scroll center -200px;
+  background-size: cover;
 }
 .lw14-landing-ministries-ministry-container-chinese {
   background: url('http://placehold.it/800x800') no-repeat scroll center center;
 }
 .lw14-landing-ministries-ministry-container-youth {
-  background: url('http://placehold.it/800x800') no-repeat scroll center center;
+  background: url('../img/landing-ministries-bg-mobile.jpg') no-repeat scroll center -60px;
+  background-size: cover;
 }
 .lw14-landing-ministries-ministry-container-children {
   background: url('http://placehold.it/800x800') no-repeat scroll center center;
 }
 .lw14-landing-ministries-ministry-content {
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  margin-right: 1em;
+  margin-right: 40px;
   color: #fafbfc;
-  font-size: 80%;
   text-align: left;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .lw14-landing-ministries-subtitle {
+  margin-top: 0;
   margin-bottom: 0;
 }
 .lw14-landing-ministries-text {
@@ -309,7 +272,7 @@ p {
   margin-bottom: 0;
 }
 .lw14-landing-visitors-subtitle {
-  margin-top: 2em;
+  margin-top: 40px;
 }
 .lw14-landing-staff {
   background: #fafbfc;
@@ -319,13 +282,14 @@ p {
   margin-bottom: 0;
 }
 .lw14-landing-staff-position {
+  margin-top: 0;
   color: #aaaaaa;
   font-family: 'montserratregular';
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .lw14-landing-staff-member {
-  margin-top: 3em;
+  margin-top: 60px;
 }
 .lw14-landing-staff-photo-frame {
   text-align: center;
@@ -340,14 +304,55 @@ p {
   background-size: contain;
 }
 .lw14-landing-staff-name {
-  margin-top: 1em;
   margin-bottom: 0;
   line-height: 1;
 }
 .lw14-landing-staff-text {
   margin-bottom: 1em;
 }
-@media only screen and (min-width: 40.063em) {
+.lw14-events-intro {
+  margin-bottom: 0;
+}
+.lw14-events-body {
+  background: #fafbfc;
+}
+.lw14-events-ministries-nav {
+  margin-top: -44px;
+  font-family: 'montserratregular';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.lw14-events-upcoming-title {
+  font-family: 'montserratregular';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.lw14-events-upcoming-event {
+  padding-bottom: 40px;
+}
+.lw14-events-upcoming-event-promo {
+  height: 250px;
+}
+.lw14-events-upcoming-event-content-title {
+  font-family: 'montserratregular';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.lw14-events-regular-event {
+  padding-bottom: 40px;
+}
+.lw14-events-regular-event-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.lw14-events-regular-event-title:first-child {
+  margin-top: 0;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
   .lw14-nav-menu-item {
     padding: 0 1em;
   }
@@ -364,58 +369,65 @@ p {
   .lw14-landing-staff {
     min-height: 100%;
   }
-  .lw14-landing-intro .container,
-  .lw14-landing-about .container,
-  .lw14-landing-ministries .container,
-  .lw14-landing-visitors .container,
-  .lw14-landing-staff .container {
-    max-width: 600px;
-  }
   .lw14-landing-intro {
     min-height: 90%;
     background-position: center top;
   }
-  .lw14-landing-about-closing-text {
-    letter-spacing: .1em;
-    margin-left: 5.95em;
-    text-indent: -5.95em;
+  .lw14-landing-ministries-ministry-container-english {
+    background-position: center -30px;
   }
   .lw14-landing-staff {
     text-align: left;
   }
   .lw14-landing-staff-photo {
-    width: 155px;
-    height: 155px;
+    width: 220px;
+    height: 220px;
+  }
+  .lw14-events-ministries-nav {
+    margin-top: -50px;
+  }
+  .lw14-events-upcoming-event-promo {
+    height: 150px;
+  }
+  .lw14-events-upcoming-event-content-title {
+    margin-top: 0;
   }
 }
-@media only screen and (min-width: 1400px) {
-  html {
-    zoom: 1.1;
+@media only screen and (min-width: 992px) {
+  .lw14-landing-ministries-ministry-container {
+    position: relative;
+    height: 400px;
+  }
+  .lw14-landing-ministries-ministry-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 80%;
+  }
+  .lw14-landing-ministries-ministry-container-english {
+    background-position: center center;
+  }
+  .lw14-landing-staff-photo {
+    width: 290px;
+    height: 290px;
+  }
+  .lw14-events-upcoming {
+    background: #fff;
+    border-right: 1px solid #ddd;
+  }
+  .lw14-events-regular {
+    padding-left: 30px;
+    font-size: 80%;
   }
 }
-@media only screen and (min-width: 64.063em) {
-  body {
-    font-size: 20px;
-  }
-  .lw14-landing-intro .container,
-  .lw14-landing-about .container,
-  .lw14-landing-ministries .container,
-  .lw14-landing-visitors .container,
-  .lw14-landing-staff .container {
-    max-width: 870px;
-  }
+@media only screen and (min-width: 1200px) {
   .lw14-landing-intro {
     min-height: 90%;
     background-image: url('../img/landing-intro-bg-2.jpg');
     background-position: center center;
   }
-  .lw14-landing-intro-title {
-    padding-top: 88px;
-    margin-bottom: 0.375em;
-    font-size: 2.4em;
-  }
-  .lw14-landing-intro-text {
-    font-size: 1.2em;
+  .lw14-landing-intro h1 {
+    font-size: 48px;
   }
   .lw14-landing-about {
     background-position: left top;
@@ -426,11 +438,8 @@ p {
   .lw14-landing-ministries-title {
     padding-top: 92px;
   }
-  .lw14-landing-ministries-list-item-content {
-    font-size: 80%;
-  }
   .lw14-landing-staff-photo {
-    width: 230px;
-    height: 230px;
+    width: 260px;
+    height: 260px;
   }
 }

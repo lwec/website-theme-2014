@@ -1,7 +1,6 @@
 @import 'lw14-includes.less';
 
 // variables
-@nav-height: 60px;
 @img_dir: '../img';
 @bg-light: #fafbfc;
 @bg-light-rgba: rgba( 250, 251, 252, 0.95 );
@@ -11,25 +10,23 @@
 @default-text: #545454;
 @secondary-text: #aaa;
 
+.emphasis-title() {
+	font-family: 'montserratregular';
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+.light-font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 // bootstrap overrides
-h1, h2, h3, h4, h5, h6 { margin: 0 0 0.5em 0; color: inherit; font-family: inherit; line-height: 1.5; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.5; }
+h2 { font-size: 1.5em; } // 30px
+h3 { font-size: 1.2em; } // 24px
+h4 { font-size: 0.9em; } // 18px
 p, ul, ol, dl { line-height: 1.5; }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus { background: transparent; }
-
-// foundation menu overrides
-.top-bar { height: @nav-height; line-height: @nav-height; }
-.top-bar.expanded { background: #222; background: rgba( 17, 17, 17, 0.9 ); }
-.top-bar.expanded .title-area { background: transparent; }
-.top-bar .name { height: @nav-height; }
-.top-bar .name h1 { padding-top: 10px; }
-.top-bar .name h1 a { display: inline-block; width: 53px; height: 40px; padding: 0; }
-.top-bar .toggle-topbar a { font-size: inherit; }
-.top-bar-section li:not(.has-form) a:not(.button) { display: inline; padding: 0 0 4px; background: inherit; }
-.top-bar-section li:not(.has-form) a:not(.button):hover { background: inherit; }
-.top-bar-section ul { font-size: inherit; background: inherit; }
-.top-bar-section ul li > a { display: inline-block; font-family: inherit; }
-.top-bar-section ul li.active > a { font-size: inherit; }
-.top-bar-section ul li.active > a:hover {  }
 
 // global styles
 html, body { height: 100%; }
@@ -43,9 +40,7 @@ p { text-rendering: optimizelegibility; }
 .lw14-nav-container { background: rgba( 17, 17, 17, 0.9 ); }
 .lw14-nav {
 	background: transparent;
-	font-family: 'montserratregular';
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	.emphasis-title();
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -54,13 +49,26 @@ p { text-rendering: optimizelegibility; }
 		background: transparent url( '@{img_dir}/menu-logo.png' ) no-repeat scroll center center;
 	}
 
-	&-menu-item { line-height: @nav-height; }
 	&-menu-item-link { transition: text-shadow 300ms; }
 	&-menu-item-link:hover { text-shadow: 0 0 10px rgba( 255, 255, 255, 0.8 ); }
 }
 
+.lw14-landing-intro, .lw14-events-intro {
+	h1 {
+		font-size: 40px;
+		.emphasis-title();
+	}
+	p {
+		margin-bottom: 1em;
+		font-size: 1.2em;
+	}
+	p:last-child { margin-bottom: 0; }
+
+	margin-bottom: 0;
+}
+
 .lw14-footer {
-	padding: 1em 0;
+	padding: 40px 0;
 
 	color: @bg-light;
 	-webkit-font-smoothing: antialiased;
@@ -70,31 +78,27 @@ p { text-rendering: optimizelegibility; }
 
 // landing page
 .lw14-landing {
-	&-intro, &-visitors, &-about, &-ministries, &-staff { padding-bottom: 5em; }
+	&-intro, &-visitors, &-about, &-ministries, &-staff { padding-bottom: 80px; }
 
 	&-about, &-visitors, &-staff {
-		padding-top: 100px;
+		padding-top: 80px;
 
 		&-title { line-height: 1; }
 	}
 
 	&-title {
-		margin-bottom: 1em;
 		font-family: 'pt_serifitalic';
-		font-size: 2em;
+		font-size: 40px;
 		letter-spacing: 0.05em;
 	}
 	&-subtitle {
-		margin-bottom: 1em;
-		font-family: 'montserratregular';
+		.emphasis-title();
 		font-size: 1.1em;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
 	}
 }
 
 .lw14-landing-intro {
-	color: @bg-light; 
+	color: @bg-light;
 	text-align: center;
 	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.5 );
 	-webkit-font-smoothing: antialiased;
@@ -104,15 +108,9 @@ p { text-rendering: optimizelegibility; }
 
 	&-title {
 		padding-top: 92px; // 50px nav + 50px padding needed = 100px. but the line height makes up for some of that 2nd 50px.
-		margin-bottom: 0.25em; // takes into account the extra 4px from the line height of the subtext + the extra 8px at the bottom of the title text.
-		font-family: 'montserratregular';
-		font-size: 2em;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
+		margin-bottom: 15px;
 	}
-	&-text { margin-bottom: 1em; }
-	&-text:last-child { margin-bottom: 0; }
-	&-scrolldown { font-size: 2em; margin-top: 2em; }
+	// &-scrolldown { font-size: 2em; margin-top: 2em; }
 }
 
 .lw14-landing-about {
@@ -127,20 +125,26 @@ p { text-rendering: optimizelegibility; }
 	background-size: cover;
 
 	&-title {
-		margin-bottom: 0.625em;
+		margin-bottom: 25px;
 		letter-spacing: 0.1em;
 	}
 
-	&-list { margin: 0 0 0 0.95em; list-style-type: none; }
-	&-list-item { margin-bottom: 1em; text-indent: -0.95em; }
+	&-list { margin: 0 0 0 15px; padding-left: 0; list-style-type: none; }
+	&-list-item { margin-bottom: 15px; text-indent: -15px; }
 	&-list-item:last-child { margin-bottom: 0; }
 
-	&-closing { margin-top: 2.45em; } // 60px total
-	&-closing-text { margin-bottom:0; font-size: 1.125em; letter-spacing: 2px; } // 1.125em = 18px
+	&-closing { margin-top: 40px; } // 60px total
+	&-closing-text {
+		margin-bottom: 0;
+		margin-left: 105px;
+		font-size: 1.125em;
+		letter-spacing: 0.1em;
+		text-indent: -105px;
+	} // 1.125em = 18px
 }
 
 .lw14-landing-ministries {
-	padding-bottom: 4em; // as opposed to 5em, because the paragraphs have a margin
+	padding-bottom: 60px;
 	text-align: center;
 	background: @bg-light;
 
@@ -150,28 +154,22 @@ p { text-rendering: optimizelegibility; }
 		font-size: 1.5em;
 	}
 
-	&-ministry { padding-bottom: 1em; }
-	&-ministry-container {
-		height: 350px;
-		padding: 1em;
-		position: relative;
-	}
-	&-ministry-container-english { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
+	&-ministry { padding-bottom: 30px; }
+	&-ministry-container { padding: 40px; }
+	&-ministry-container-english { background: url( '@{img_dir}/landing-ministries-bg-echo.jpg' ) no-repeat scroll center -200px; background-size: cover; }
 	&-ministry-container-chinese { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
-	&-ministry-container-youth { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
+	&-ministry-container-youth { background: url( '@{img_dir}/landing-ministries-bg-mobile.jpg' ) no-repeat scroll center -60px; background-size: cover; }
 	&-ministry-container-children { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
 	&-ministry-content {
-		position: absolute;
-		bottom: 1em; left: 1em;
-		margin-right: 1em;
+		margin-right: 40px;
 		color: @bg-light;
-		font-size: 80%;
 		text-align: left;
+		text-shadow: 0 0 5px rgba(0,0,0,0.7);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	&-subtitle { margin-bottom: 0; }
+	&-subtitle { margin-top: 0; margin-bottom: 0; }
 	&-text { margin-bottom: 0; }
 }
 
@@ -181,9 +179,7 @@ p { text-rendering: optimizelegibility; }
 
 	&-title, &-subtitle, &-text { margin-bottom: 0; }
 
-	&-title {  }
-	&-subtitle { margin-top: 2em; }
-	&-text { }
+	&-subtitle { margin-top: 40px; }
 }
 
 .lw14-landing-staff {
@@ -193,13 +189,12 @@ p { text-rendering: optimizelegibility; }
 
 	&-title { margin-bottom: 0; }
 	&-position {
+		margin-top: 0;
 		color: @secondary-text;
-		font-family: 'montserratregular';
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+		.emphasis-title();
 	}
 
-	&-member { margin-top: 3em; }
+	&-member { margin-top: 60px; }
 	&-photo-frame { text-align: center; }
 	&-photo {
 		display: inline-block;
@@ -210,9 +205,39 @@ p { text-rendering: optimizelegibility; }
 		background: url( 'http://placehold.it/800x800' ) no-repeat scroll left top;
 		background-size: contain;
 	}
-	&-name { margin-top: 1em; margin-bottom: 0; line-height: 1; }
+	&-name { margin-bottom: 0; line-height: 1; }
 	&-text { margin-bottom: 1em; }
 }
 
+.lw14-events-intro { margin-bottom: 0; }
+.lw14-events-body { background: @bg-light; }
+.lw14-events-ministries-nav {
+	margin-top: -44px;
+	.emphasis-title();
+	text-align: center;
+}
+
+.lw14-events-upcoming {
+	&-title { .emphasis-title(); }
+
+	&-event {
+		padding-bottom: 40px;
+
+		&-promo { height: 250px; }
+		&-content-title { .emphasis-title(); }
+	}
+}
+
+
+.lw14-events-regular {
+	&-event {
+		padding-bottom: 40px;
+
+		&-title { margin-top: 30px; margin-bottom: 0; }
+		&-title:first-child { margin-top: 0; }
+	}
+}
+
+@import 'lw14-small.less';
 @import 'lw14-medium.less';
 @import 'lw14-large.less';

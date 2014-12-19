@@ -1,0 +1,57 @@
+@media only screen and ( min-width: 768px ) {
+
+body { font-size: 20px; }
+
+// foundation overrides
+// html { font-size: 18px; } // 1.125em = 18px, 1.25 = 20px
+// .column, .columns { padding-left: 2em; padding-right: 2em; }
+
+// all pages
+.lw14-nav-menu-item {
+	padding: 0 1em;
+
+	&:first-child { padding-left: 0; }
+	&:last-child { padding-right: 0; }
+}
+
+// landing page
+.lw14-landing {
+	&-intro, &-visitors, &-about, &-ministries, &-staff {
+		min-height: 100%;
+	}
+
+	&-intro, &-about, &-ministries, &-visitors, &-staff {
+		// .container { max-width: 600px; }
+	}
+}
+
+.lw14-landing-intro {
+	min-height: 90%;
+	background-position: center top;
+}
+
+.lw14-landing-ministries {
+	&-ministry-container-english { background-position: center -30px; }
+}
+
+.lw14-landing-staff {
+	text-align: left;
+
+	&-photo {
+		width: 220px;
+		height: 220px;
+	}
+}
+
+.lw14-events-ministries-nav {
+	margin-top: -50px;
+}
+
+.lw14-events-upcoming {
+	&-event {
+		&-promo { height: 150px; }
+		&-content-title { margin-top: 0; }
+	}
+}
+
+}

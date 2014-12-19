@@ -1,52 +1,35 @@
-@media only screen and ( min-width: 40.063em ) { // ~640px
-
-// foundation overrides
-// html { font-size: 18px; } // 1.125em = 18px, 1.25 = 20px
-// .column, .columns { padding-left: 2em; padding-right: 2em; }
-
-// all pages
-.lw14-nav-menu-item {
-	padding: 0 1em;
-
-	&:first-child { padding-left: 0; }
-	&:last-child { padding-right: 0; }
-}
-
-// landing page
-.lw14-landing {
-	&-intro, &-visitors, &-about, &-ministries, &-staff {
-		min-height: 100%;
-	}
-
-	&-intro, &-about, &-ministries, &-visitors, &-staff {
-		.container { max-width: 600px; }
-	}
-}
-
-.lw14-landing-intro {
-	min-height: 90%;
-	background-position: center top;
-}
-
-.lw14-landing-about {
-	&-closing-text {
-		letter-spacing: .1em;
-		margin-left: 5.95em;
-		text-indent: -5.95em;
-	}
-}
+@media only screen and ( min-width: 992px ) {
 
 .lw14-landing-ministries {
-	// &-subtitle, &-text { text-align: left; }
+	&-ministry-container {
+		position: relative;
+		height: 400px;
+	}
+
+	&-ministry-content {
+		position: absolute;
+		bottom: 40px; left: 40px;
+		font-size: 80%;
+	}
+
+	&-ministry-container-english { background-position: center center; }
 }
 
 .lw14-landing-staff {
-	text-align: left;
-
 	&-photo {
-		width: 155px;
-		height: 155px;
+		width: 290px;
+		height: 290px;
 	}
+}
+
+.lw14-events-upcoming {
+	background: #fff;
+	border-right: 1px solid #ddd;
+}
+
+.lw14-events-regular {
+	padding-left: 30px;
+	font-size: 80%;
 }
 
 }
