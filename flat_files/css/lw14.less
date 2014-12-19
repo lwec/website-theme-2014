@@ -9,6 +9,7 @@
 @bg-dark: #3d3d3d;
 @bg-nav: #222;
 @default-text: #545454;
+@secondary-text: #aaa;
 
 // bootstrap overrides
 h1, h2, h3, h4, h5, h6 { margin: 0 0 0.5em 0; color: inherit; font-family: inherit; line-height: 1.5; }
@@ -86,7 +87,7 @@ p { text-rendering: optimizelegibility; }
 	&-subtitle {
 		margin-bottom: 1em;
 		font-family: 'montserratregular';
-		font-size: 1.2em;
+		font-size: 1.1em;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 	}
@@ -191,7 +192,12 @@ p { text-rendering: optimizelegibility; }
 	text-align: center;
 
 	&-title { margin-bottom: 0; }
-
+	&-position {
+		color: @secondary-text;
+		font-family: 'montserratregular';
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
 
 	&-member { margin-top: 3em; }
 	&-photo-frame { text-align: center; }
@@ -204,8 +210,8 @@ p { text-rendering: optimizelegibility; }
 		background: url( 'http://placehold.it/800x800' ) no-repeat scroll left top;
 		background-size: contain;
 	}
-	&-name { margin-top: 1em; margin-bottom: 0.5em; line-height: 1; }
-	&-text { margin-bottom: 0; }
+	&-name { margin-top: 1em; margin-bottom: 0; line-height: 1; }
+	&-text { margin-bottom: 1em; }
 }
 
 @import 'lw14-medium.less';

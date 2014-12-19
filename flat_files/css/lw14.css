@@ -120,6 +120,9 @@ body {
 iframe {
   max-width: 100%;
 }
+a {
+  color: #0099ff;
+}
 p {
   text-rendering: optimizelegibility;
 }
@@ -185,14 +188,14 @@ p {
 .lw14-landing-subtitle {
   margin-bottom: 1em;
   font-family: 'montserratregular';
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .lw14-landing-intro {
   color: #fafbfc;
   text-align: center;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fafbfc url('../img/landing-intro-bg-2-mobile.jpg') no-repeat scroll center center;
@@ -315,6 +318,12 @@ p {
 .lw14-landing-staff-title {
   margin-bottom: 0;
 }
+.lw14-landing-staff-position {
+  color: #aaaaaa;
+  font-family: 'montserratregular';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 .lw14-landing-staff-member {
   margin-top: 3em;
 }
@@ -332,11 +341,11 @@ p {
 }
 .lw14-landing-staff-name {
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   line-height: 1;
 }
 .lw14-landing-staff-text {
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 @media only screen and (min-width: 40.063em) {
   .lw14-nav-menu-item {
