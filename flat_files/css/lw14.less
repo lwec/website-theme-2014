@@ -3,12 +3,13 @@
 // variables
 @img_dir: '../img';
 @bg-light: #fafbfc;
-@bg-light-rgba: rgba( 250, 251, 252, 0.95 );
 @bg-blue: #e0f5ff;
 @bg-dark: #3d3d3d;
 @bg-nav: #222;
+@bg-nav-rgba: rgba( 22, 22, 22, 0.9 );
 @default-text: #545454;
 @secondary-text: #aaa;
+@link-text: #09f;
 
 .emphasis-title() {
 	font-family: 'montserratregular';
@@ -27,17 +28,19 @@ h3 { font-size: 1.2em; } // 24px
 h4 { font-size: 0.9em; } // 18px
 p, ul, ol, dl { line-height: 1.5; }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus { background: transparent; }
+.nav-tabs > li > a { line-height: 50px; padding: 0 15px; }
 
 // global styles
 html, body { height: 100%; }
 html { height: 100%; }
 body { font-size: 16px; }
 iframe { max-width: 100%; }
-a { color: #0099ff; }
+section { padding-top: 80px; padding-bottom: 80px; }
+a { color: @link-text; transition: color 300ms; }
 p { text-rendering: optimizelegibility; }
 .lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-nav; }
 
-.lw14-nav-container { background: rgba( 17, 17, 17, 0.9 ); }
+.lw14-nav-container { background: @bg-nav-rgba; }
 .lw14-nav {
 	background: transparent;
 	.emphasis-title();
@@ -53,11 +56,20 @@ p { text-rendering: optimizelegibility; }
 	&-menu-item-link:hover { text-shadow: 0 0 10px rgba( 255, 255, 255, 0.8 ); }
 }
 
-.lw14-landing-intro, .lw14-events-intro {
-	h1 {
-		font-size: 40px;
-		.emphasis-title();
-	}
+.lw14-page-intro {
+	margin-bottom: 0;
+	padding-top: 50px;
+	padding-bottom: 80px;
+	min-height: 100%;
+
+	color: @bg-light;
+	text-align: center;
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.5 );
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background: @bg-dark;
+
 	p {
 		margin-bottom: 1em;
 		font-size: 1.2em;
@@ -65,6 +77,20 @@ p { text-rendering: optimizelegibility; }
 	p:last-child { margin-bottom: 0; }
 
 	margin-bottom: 0;
+}
+.jumbotron .lw14-page-title {
+	padding-top: 40px;
+	margin-bottom: 15px;
+	font-size: 40px;
+	.emphasis-title();
+	text-align: center;
+}
+
+.lw14-title {
+	margin: 0;
+	font-size: 2em;
+	letter-spacing: 0.05em;
+	line-height: 1;
 }
 
 .lw14-footer {
@@ -78,38 +104,14 @@ p { text-rendering: optimizelegibility; }
 
 // landing page
 .lw14-landing {
-	&-intro, &-visitors, &-about, &-ministries, &-staff { padding-bottom: 80px; }
-
-	&-about, &-visitors, &-staff {
-		padding-top: 80px;
-
-		&-title { line-height: 1; }
-	}
-
-	&-title {
-		font-family: 'pt_serifitalic';
-		font-size: 40px;
-		letter-spacing: 0.05em;
-	}
-	&-subtitle {
-		.emphasis-title();
-		font-size: 1.1em;
-	}
+	&-title { font-family: 'pt_serifitalic'; }
+	&-subtitle { .emphasis-title(); font-size: 1.1em; }
 }
 
 .lw14-landing-intro {
-	color: @bg-light;
-	text-align: center;
-	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.5 );
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	background: @bg-light url( '@{img_dir}/landing-intro-bg-2-mobile.jpg' ) no-repeat scroll center center;
 	background-size: cover;
 
-	&-title {
-		padding-top: 92px; // 50px nav + 50px padding needed = 100px. but the line height makes up for some of that 2nd 50px.
-		margin-bottom: 15px;
-	}
 	// &-scrolldown { font-size: 2em; margin-top: 2em; }
 }
 
@@ -124,60 +126,57 @@ p { text-rendering: optimizelegibility; }
 	background: @bg-dark url( '@{img_dir}/landing-about-bg-2.jpg' ) no-repeat scroll center top;
 	background-size: cover;
 
-	&-title {
-		margin-bottom: 25px;
-		letter-spacing: 0.1em;
-	}
+	&-title { letter-spacing: 0.1em; }
 
 	&-list { margin: 0 0 0 15px; padding-left: 0; list-style-type: none; }
-	&-list-item { margin-bottom: 15px; text-indent: -15px; }
+	&-list-item { margin-top: 30px; margin-bottom: 15px; text-indent: -15px; }
 	&-list-item:last-child { margin-bottom: 0; }
 
 	&-closing { margin-top: 40px; } // 60px total
 	&-closing-text {
 		margin-bottom: 0;
-		margin-left: 105px;
+		margin-left: 55px;
 		font-size: 1.125em;
 		letter-spacing: 0.1em;
-		text-indent: -105px;
+		text-indent: -55px;
 	} // 1.125em = 18px
 }
 
-.lw14-landing-ministries {
-	padding-bottom: 60px;
-	text-align: center;
-	background: @bg-light;
+// .lw14-landing-ministries {
+// 	padding-bottom: 60px;
+// 	text-align: center;
+// 	background: @bg-light;
 
-	&-title {
-		padding-top: 94px;
-		margin-bottom: 38px;
-		font-size: 1.5em;
-	}
+// 	&-title {
+// 		padding-top: 94px;
+// 		margin-bottom: 38px;
+// 		font-size: 1.5em;
+// 	}
 
-	&-ministry { padding-bottom: 30px; }
-	&-ministry-container { padding: 40px; }
-	&-ministry-container-english { background: url( '@{img_dir}/landing-ministries-bg-echo.jpg' ) no-repeat scroll center -200px; background-size: cover; }
-	&-ministry-container-chinese { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
-	&-ministry-container-youth { background: url( '@{img_dir}/landing-ministries-bg-mobile.jpg' ) no-repeat scroll center -60px; background-size: cover; }
-	&-ministry-container-children { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
-	&-ministry-content {
-		margin-right: 40px;
-		color: @bg-light;
-		text-align: left;
-		text-shadow: 0 0 5px rgba(0,0,0,0.7);
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
+// 	&-ministry { padding-bottom: 30px; }
+// 	&-ministry-container { padding: 40px; }
+// 	&-ministry-container-english { background: url( '@{img_dir}/landing-ministries-bg-echo.jpg' ) no-repeat scroll center -200px; background-size: cover; }
+// 	&-ministry-container-chinese { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
+// 	&-ministry-container-youth { background: url( '@{img_dir}/landing-ministries-bg-mobile.jpg' ) no-repeat scroll center -60px; background-size: cover; }
+// 	&-ministry-container-children { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
+// 	&-ministry-content {
+// 		margin-right: 40px;
+// 		color: @bg-light;
+// 		text-align: left;
+// 		text-shadow: 0 0 5px rgba(0,0,0,0.7);
+// 		-webkit-font-smoothing: antialiased;
+// 		-moz-osx-font-smoothing: grayscale;
+// 	}
 
-	&-subtitle { margin-top: 0; margin-bottom: 0; }
-	&-text { margin-bottom: 0; }
-}
+// 	&-subtitle { margin-top: 0; margin-bottom: 0; }
+// 	&-text { margin-bottom: 0; }
+// }
 
 .lw14-landing-visitors {
 	background: @bg-blue url( '@{img_dir}/landing-visitors-bg.jpg' ) no-repeat scroll center bottom;
 	background-size: cover;
 
-	&-title, &-subtitle, &-text { margin-bottom: 0; }
+	&-subtitle, &-text { margin-bottom: 0; }
 
 	&-subtitle { margin-top: 40px; }
 }
@@ -185,9 +184,8 @@ p { text-rendering: optimizelegibility; }
 .lw14-landing-staff {
 	background: @bg-light;
 
-	text-align: center;
+	// text-align: center;
 
-	&-title { margin-bottom: 0; }
 	&-position {
 		margin-top: 0;
 		color: @secondary-text;
@@ -195,41 +193,61 @@ p { text-rendering: optimizelegibility; }
 	}
 
 	&-member { margin-top: 60px; }
-	&-photo-frame { text-align: center; }
+	// &-photo-frame { text-align: center; }
 	&-photo {
 		display: inline-block;
 		width: 240px;
 		height: 240px;
 		max-width: 100%;
 		border-radius: 100%;
-		background: url( 'http://placehold.it/800x800' ) no-repeat scroll left top;
+		background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center;
 		background-size: contain;
 	}
 	&-name { margin-bottom: 0; line-height: 1; }
 	&-text { margin-bottom: 1em; }
+
+	&-tonychon &-photo { background-image: url( '../img/landing-staff-tonychon.jpg' ); }
 }
 
-.lw14-events-intro { margin-bottom: 0; }
-.lw14-events-body { background: @bg-light; }
-.lw14-events-ministries-nav {
-	margin-top: -44px;
+.lw14-events-nav-list {
+	margin-top: -50px;
 	.emphasis-title();
 	text-align: center;
+	border-bottom: 0 none;
 }
+.lw14-events-nav-item .lw14-events-nav-link {
+	color: @bg-light;
+	background: @bg-nav; background: @bg-nav-rgba;
+	border: 0 none;
+}
+.lw14-events-nav-item .lw14-events-nav-link:hover { color: @link-text; background: @bg-nav; background: @bg-nav-rgba; }
+.lw14-events-nav-item.active .lw14-events-nav-link,
+.lw14-events-nav-item.active .lw14-events-nav-link:hover { background: @bg-light; border: 0 none; }
+.lw14-events-nav-item:not( .active ) { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+// Events Page
+.lw14-events-title { .emphasis-title(); }
 
 .lw14-events-upcoming {
-	&-title { .emphasis-title(); }
+	background: @bg-light;
 
 	&-event {
-		padding-bottom: 40px;
+		padding-top: 40px;
 
 		&-promo { height: 250px; }
-		&-content-title { .emphasis-title(); }
+		&-title, &-date { .emphasis-title(); margin: 0; }
+		&-date { color: @secondary-text; }
+		&-text { margin-top: 20px; }
 	}
 }
 
-
 .lw14-events-regular {
+	color: @bg-light;
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.3 ); // makes the text stand out more (too thin w/out it)
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: @bg-dark;
+
 	&-event {
 		padding-bottom: 40px;
 

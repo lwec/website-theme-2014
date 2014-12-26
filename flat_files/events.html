@@ -34,11 +34,11 @@
 	</div><!-- /.container-fluid -->
 </nav>
 
-<section class="lw14-events-intro jumbotron">
+<section class="lw14-events-intro lw14-page-intro jumbotron">
 	<div class="container">
 		<div class="row">
 			<header class="col-xs-12">
-				<h1 class="lw14-events-intro-title">
+				<h1 class="lw14-page-title">
 					Events
 				</h1>
 			</header>
@@ -47,23 +47,27 @@
 	</div>
 </section>
 
-<section class="lw14-events-body">
+<div class="lw14-events-nav">
 	<div class="container">
-		<ul class="lw14-events-ministries-nav nav nav-tabs row">
-			<li role="presentation" class="lw14-events-ministries-nav-item active col-xs-4 col-md-2">
-				<a class="lw14-events-ministries-nav-link" href="javascript:void(0);">English</a>
+		<ul class="lw14-events-nav-list nav nav-tabs row">
+			<li role="presentation" class="lw14-events-nav-item active col-xs-4 col-md-3">
+				<a class="lw14-events-nav-link" href="javascript:void(0);">English</a>
 			</li>
-			<li role="presentation" class="lw14-events-ministries-nav-item col-xs-4 col-md-2">
-				<a class="lw14-events-ministries-nav-link" href="javascript:void(0);">Youth</a>
+			<li role="presentation" class="lw14-events-nav-item col-xs-4 col-md-3">
+				<a class="lw14-events-nav-link" href="javascript:void(0);">Youth</a>
 			</li>
-			<li role="presentation" class="lw14-events-ministries-nav-item col-xs-4 col-md-2">
-				<a class="lw14-events-ministries-nav-link" href="javascript:void(0);">Children</a>
+			<li role="presentation" class="lw14-events-nav-item col-xs-4 col-md-3">
+				<a class="lw14-events-nav-link" href="javascript:void(0);">Children</a>
 			</li>
 		</ul>
+	</div>
+</div>
 
+<section class="lw14-events-upcoming">
+	<div class="container">
 		<div class="row">
-			<div class="lw14-events-upcoming col-xs-12 col-md-8">
-				<h2 class="lw14-events-upcoming-title">
+			<div class="lw14-events-upcoming col-xs-12">
+				<h2 class="lw14-events-upcoming-title lw14-events-title lw14-title">
 					Upcoming Events
 				</h2>
 
@@ -73,16 +77,23 @@
 						</div>
 					</div>
 					<div class="lw14-events-upcoming-event-content col-xs-12 col-sm-8">
-						<h3 class="lw14-events-upcoming-event-content-title">Arrival 2014</h3>
-						<p class="lw14-events-upcoming-event-content-text">
+						<h3 class="lw14-events-upcoming-event-title">Arrival 2014</h3>
+						<h4 class="lw14-events-upcoming-event-date">December 22, 2014</h4>
+						<p class="lw14-events-upcoming-event-text">
 							Join us for songs, skits, and a message.
 						</p>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
 
-			<div class="lw14-events-regular col-xs-12 col-md-4">
-				<h2 class="lw14-events-regular-title">
+<section class="lw14-events-regular">
+	<div class="container">
+		<div class="row">
+			<div class="lw14-events-regular col-xs-12">
+				<h2 class="lw14-events-regular-title lw14-events-title lw14-title">
 					Regular Meetings
 				</h2>
 
@@ -112,6 +123,7 @@
 <script src="js/libraries/02-placeholder.js"></script>
 <script src="js/libraries/03-fastclick.js"></script>
 <script src="js/libraries/04-jquery.cookie.js"></script>
+<script src="js/libraries/05-jquery.stellar.js"></script>
 <script src="js/libraries/bootstrap.js"></script>
 <script>
 ( function( $ ) {

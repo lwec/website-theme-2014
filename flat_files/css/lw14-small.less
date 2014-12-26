@@ -2,10 +2,6 @@
 
 body { font-size: 20px; }
 
-// foundation overrides
-// html { font-size: 18px; } // 1.125em = 18px, 1.25 = 20px
-// .column, .columns { padding-left: 2em; padding-right: 2em; }
-
 // all pages
 .lw14-nav-menu-item {
 	padding: 0 1em;
@@ -14,20 +10,20 @@ body { font-size: 20px; }
 	&:last-child { padding-right: 0; }
 }
 
-// landing page
-.lw14-landing {
-	&-intro, &-visitors, &-about, &-ministries, &-staff {
-		min-height: 100%;
-	}
+.jumbotron .lw14-page-title { padding-top: 80px; }
 
-	&-intro, &-about, &-ministries, &-visitors, &-staff {
-		// .container { max-width: 600px; }
-	}
+// landing page
+.lw14-landing-intro {
+	background-position: center top;
 }
 
-.lw14-landing-intro {
-	min-height: 90%;
-	background-position: center top;
+.lw14-landing-about {
+	&-closing-text {
+		margin-left: 105px;
+		text-indent: -105px;
+	}
+
+	&-list-item { margin-top: 40px; }
 }
 
 .lw14-landing-ministries {
@@ -43,13 +39,8 @@ body { font-size: 20px; }
 	}
 }
 
-.lw14-events-ministries-nav {
-	margin-top: -50px;
-}
-
 .lw14-events-upcoming {
 	&-event {
-		&-promo { height: 150px; }
 		&-content-title { margin-top: 0; }
 	}
 }

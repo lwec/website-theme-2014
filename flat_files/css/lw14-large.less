@@ -1,27 +1,18 @@
 @media only screen and ( min-width: 1200px ) {
 
+body { font-size: 24px; }
+
 // all pages
 .lw14-nav {
-	// .row { max-width: 870px; }
+	&-logo { height: 60px; }
 }
+.navbar-nav > li > a { padding-top: 20px; padding-bottom: 20px; }
+.nav-tabs > li > a { line-height: 60px; padding: 0 20px; }
+
+.lw14-page-intro { padding-top: 60px; }
+.jumbotron .lw14-page-title { padding-top: 120px; font-size: 2em; }
 
 // landing page
-.lw14-landing {
-	&-intro, &-about, &-ministries, &-visitors, &-staff {
-		// .container { max-width: 870px; }
-	}
-}
-
-.lw14-landing-intro {
-	min-height: 90%;
-	background-image: url( '@{img_dir}/landing-intro-bg-2.jpg' );
-	background-position: center center;
-
-	h1 {
-		font-size: 48px;
-	}
-}
-
 .lw14-landing-about {
 	background-position: left top;
 
@@ -40,5 +31,7 @@
 		height: 260px;
 	}
 }
+
+.lw14-events-nav-list { margin-top: -60px; }
 
 }
