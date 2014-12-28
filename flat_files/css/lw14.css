@@ -90,8 +90,13 @@ section {
   padding-bottom: 80px;
 }
 a {
-  color: #0099ff;
+  color: #1f87e8;
   transition: color 300ms;
+}
+a:hover,
+a:focus {
+  color: #1652a3;
+  text-decoration: none;
 }
 p {
   text-rendering: optimizelegibility;
@@ -137,6 +142,7 @@ p {
 .lw14-page-intro p {
   margin-bottom: 1em;
   font-size: 1.2em;
+  font-weight: normal;
 }
 .lw14-page-intro p:last-child {
   margin-bottom: 0;
@@ -159,6 +165,11 @@ p {
 .lw14-footer {
   padding: 40px 0;
   color: #fafbfc;
+  font-family: 'montserratregular';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 60%;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #222222;
@@ -270,7 +281,7 @@ p {
   border: 0 none;
 }
 .lw14-events-nav-item .lw14-events-nav-link:hover {
-  color: #0099ff;
+  color: #1f87e8;
   background: #222222;
   background: rgba(22, 22, 22, 0.9);
 }
@@ -326,6 +337,23 @@ p {
 }
 .lw14-events-regular-event-title:first-child {
   margin-top: 0;
+}
+.lw14-sermons-content {
+  background: #fafbfc;
+}
+.lw14-sermons-sermon {
+  padding-top: 40px;
+}
+.lw14-sermons-sermon-title {
+  margin: 0;
+}
+.lw14-sermons-sermon-meta {
+  color: #aaaaaa;
+  font-family: 'montserratregular';
+  font-size: 75%;
+}
+.lw14-sermons-sermon-meta-link {
+  margin-right: 20px;
 }
 @media only screen and (min-width: 768px) {
   body {

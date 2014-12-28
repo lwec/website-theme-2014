@@ -9,7 +9,8 @@
 @bg-nav-rgba: rgba( 22, 22, 22, 0.9 );
 @default-text: #545454;
 @secondary-text: #aaa;
-@link-text: #09f;
+@link-text: #1f87e8;
+@link-text-hover: #1652a3;
 
 .emphasis-title() {
 	font-family: 'montserratregular';
@@ -37,6 +38,7 @@ body { font-size: 16px; }
 iframe { max-width: 100%; }
 section { padding-top: 80px; padding-bottom: 80px; }
 a { color: @link-text; transition: color 300ms; }
+a:hover, a:focus { color: @link-text-hover; text-decoration: none; }
 p { text-rendering: optimizelegibility; }
 .lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-nav; }
 
@@ -70,9 +72,10 @@ p { text-rendering: optimizelegibility; }
 
 	background: @bg-dark;
 
-	p {
+	p { // overwrite default bootstrap jumbotron
 		margin-bottom: 1em;
 		font-size: 1.2em;
+		font-weight: normal;
 	}
 	p:last-child { margin-bottom: 0; }
 
@@ -97,6 +100,9 @@ p { text-rendering: optimizelegibility; }
 	padding: 40px 0;
 
 	color: @bg-light;
+	.emphasis-title();
+	font-size: 60%;
+	text-align: center;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: @bg-nav;
@@ -254,6 +260,19 @@ p { text-rendering: optimizelegibility; }
 		&-title { margin-top: 30px; margin-bottom: 0; }
 		&-title:first-child { margin-top: 0; }
 	}
+}
+
+// Sermons Page
+.lw14-sermons-content {
+	background: @bg-light;
+}
+
+.lw14-sermons-sermon {
+	padding-top: 40px;
+
+	&-title { margin: 0; }
+	&-meta { color: @secondary-text; font-family: 'montserratregular'; font-size: 75%; }
+	&-meta-link { margin-right: 20px; }
 }
 
 @import 'lw14-small.less';
