@@ -1,3 +1,5 @@
+// Living Water Global + Base Styles
+
 @import 'lw14-includes.less';
 
 // variables
@@ -26,7 +28,7 @@
 h1, h2, h3, h4, h5, h6 { line-height: 1.5; }
 h2 { font-size: 1.5em; } // 30px
 h3 { font-size: 1.2em; } // 24px
-h4 { font-size: 0.9em; } // 18px
+h4 { font-size: 1em; } // 18px
 p, ul, ol, dl { line-height: 1.5; }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus { background: transparent; }
 .nav-tabs > li > a { line-height: 50px; padding: 0 15px; }
@@ -108,113 +110,6 @@ p { text-rendering: optimizelegibility; }
 	background: @bg-nav;
 }
 
-// landing page
-.lw14-landing {
-	&-title { font-family: 'pt_serifitalic'; }
-	&-subtitle { .emphasis-title(); font-size: 1.1em; }
-}
-
-.lw14-landing-intro {
-	background: @bg-light url( '@{img_dir}/landing-intro-bg-2-mobile.jpg' ) no-repeat scroll center center;
-	background-size: cover;
-
-	// &-scrolldown { font-size: 2em; margin-top: 2em; }
-}
-
-.lw14-landing-about {
-	color: @bg-light;
-	font-family: 'pt_serifitalic';
-	letter-spacing: 0.05em;
-	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.3 ); // makes the text stand out more (too thin w/out it)
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	background: @bg-dark url( '@{img_dir}/landing-about-bg-2.jpg' ) no-repeat scroll center top;
-	background-size: cover;
-
-	&-title { letter-spacing: 0.1em; }
-
-	&-list { margin: 0 0 0 15px; padding-left: 0; list-style-type: none; }
-	&-list-item { margin-top: 30px; margin-bottom: 15px; text-indent: -15px; }
-	&-list-item:last-child { margin-bottom: 0; }
-
-	&-closing { margin-top: 40px; } // 60px total
-	&-closing-text {
-		margin-bottom: 0;
-		margin-left: 55px;
-		font-size: 1.125em;
-		letter-spacing: 0.1em;
-		text-indent: -55px;
-	} // 1.125em = 18px
-}
-
-// .lw14-landing-ministries {
-// 	padding-bottom: 60px;
-// 	text-align: center;
-// 	background: @bg-light;
-
-// 	&-title {
-// 		padding-top: 94px;
-// 		margin-bottom: 38px;
-// 		font-size: 1.5em;
-// 	}
-
-// 	&-ministry { padding-bottom: 30px; }
-// 	&-ministry-container { padding: 40px; }
-// 	&-ministry-container-english { background: url( '@{img_dir}/landing-ministries-bg-echo.jpg' ) no-repeat scroll center -200px; background-size: cover; }
-// 	&-ministry-container-chinese { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
-// 	&-ministry-container-youth { background: url( '@{img_dir}/landing-ministries-bg-mobile.jpg' ) no-repeat scroll center -60px; background-size: cover; }
-// 	&-ministry-container-children { background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center; }
-// 	&-ministry-content {
-// 		margin-right: 40px;
-// 		color: @bg-light;
-// 		text-align: left;
-// 		text-shadow: 0 0 5px rgba(0,0,0,0.7);
-// 		-webkit-font-smoothing: antialiased;
-// 		-moz-osx-font-smoothing: grayscale;
-// 	}
-
-// 	&-subtitle { margin-top: 0; margin-bottom: 0; }
-// 	&-text { margin-bottom: 0; }
-// }
-
-.lw14-landing-visitors {
-	background: @bg-blue url( '@{img_dir}/landing-visitors-bg.jpg' ) no-repeat scroll center bottom;
-	background-size: cover;
-
-	&-subtitle, &-text { margin-bottom: 0; }
-
-	&-subtitle { margin-top: 40px; }
-}
-
-.lw14-landing-staff {
-	background: @bg-light;
-
-	// text-align: center;
-
-	&-position {
-		margin-top: 0;
-		color: @secondary-text;
-		.emphasis-title();
-	}
-
-	&-member { margin-top: 60px; }
-	// &-photo-frame { text-align: center; }
-	&-photo {
-		display: inline-block;
-		width: 240px;
-		height: 240px;
-		max-width: 100%;
-		border-radius: 100%;
-		background: url( 'http://placehold.it/800x800' ) no-repeat scroll center center;
-		background-size: contain;
-	}
-	&-name { margin-bottom: 0; line-height: 1; }
-	&-text { margin-bottom: 1em; }
-
-	&-tonychon &-photo { background-image: url( '../img/landing-staff-tonychon.jpg' ); }
-}
-
 .lw14-events-nav-list {
 	margin-top: -50px;
 	.emphasis-title();
@@ -275,6 +170,13 @@ p { text-rendering: optimizelegibility; }
 	&-meta-link { margin-right: 20px; }
 }
 
-@import 'lw14-small.less';
-@import 'lw14-medium.less';
-@import 'lw14-large.less';
+@import 'lw14-base-small.less';
+@import 'lw14-base-medium.less';
+@import 'lw14-base-large.less';
+
+@import 'lw14-landing-mobile.less';
+@import 'lw14-landing-small.less';
+@import 'lw14-landing-medium.less';
+@import 'lw14-landing-large.less';
+
+@import 'lw14-sermons-mobile.less';
