@@ -26,12 +26,21 @@
 
 // bootstrap overrides
 h1, h2, h3, h4, h5, h6 { line-height: 1.5; }
-h2 { font-size: 1.5em; } // 30px
-h3 { font-size: 1.2em; } // 24px
-h4 { font-size: 1em; } // 18px
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1em; }
 p, ul, ol, dl { line-height: 1.5; }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus { background: transparent; }
+.navbar-static-top { z-index: 0; }
 .nav-tabs > li > a { line-height: 50px; padding: 0 15px; }
+
+// Drupal overrides
+div.status {
+	margin: 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
 
 // global styles
 html, body { height: 100%; }
@@ -44,20 +53,44 @@ a:hover, a:focus { color: @link-text-hover; text-decoration: none; }
 p { text-rendering: optimizelegibility; }
 .lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-nav; }
 
-.lw14-nav-container { background: @bg-nav-rgba; }
+.lw14-nav-container { margin-bottom: 0; background: @bg-nav-rgba; }
 .lw14-nav {
 	background: transparent;
 	.emphasis-title();
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	.light-font-smoothing();
 
 	&-logo {
+		direction: ltr;
 		text-indent: -9999px;
 		background: transparent url( '@{img_dir}/menu-logo.png' ) no-repeat scroll center center;
 	}
 
-	&-menu-item-link { transition: text-shadow 300ms; }
+	&-menu-item,
+	.navbar-inverse & &-menu-item-link { color: @bg-light; line-height: 50px; } // Bootstrap selector override
+	.navbar-inverse & &-menu-item-link { padding-top: 0; padding-bottom: 0; }
+	&-menu-item.active { padding-left: 15px; }
+	&-menu-item-link { transition: text-shadow 300ms, color 300ms; }
 	&-menu-item-link:hover { text-shadow: 0 0 10px rgba( 255, 255, 255, 0.8 ); }
+}
+
+.lw14-tab-nav {
+	margin-top: -50px;
+	.emphasis-title();
+	text-align: center;
+	border-bottom: 0 none;
+
+	.nav-tabs { border-bottom: 0; }
+
+	li { margin-bottom: 0; } // override bootstrap
+	li a {
+		color: @bg-light;
+		background: @bg-nav; background: @bg-nav-rgba;
+		border: 0 none;
+	}
+	li a:hover { color: @link-text; background: @bg-nav; background: @bg-nav-rgba; }
+	li.active a,
+	li.active a:hover { background: @bg-light; border: 0 none; }
+	li:not( .active ) { .light-font-smoothing(); }
 }
 
 .lw14-page-intro {
@@ -69,12 +102,11 @@ p { text-rendering: optimizelegibility; }
 	color: @bg-light;
 	text-align: center;
 	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.5 );
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	.light-font-smoothing();
 
 	background: @bg-dark;
 
-	p { // overwrite default bootstrap jumbotron
+	p { // override default bootstrap jumbotron
 		margin-bottom: 1em;
 		font-size: 1.2em;
 		font-weight: normal;
@@ -98,6 +130,8 @@ p { text-rendering: optimizelegibility; }
 	line-height: 1;
 }
 
+.lw14-content { background: @bg-light; }
+
 .lw14-footer {
 	padding: 40px 0;
 
@@ -105,70 +139,39 @@ p { text-rendering: optimizelegibility; }
 	.emphasis-title();
 	font-size: 60%;
 	text-align: center;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	.light-font-smoothing();
 	background: @bg-nav;
 }
 
-.lw14-events-nav-list {
-	margin-top: -50px;
-	.emphasis-title();
-	text-align: center;
-	border-bottom: 0 none;
-}
-.lw14-events-nav-item .lw14-events-nav-link {
-	color: @bg-light;
-	background: @bg-nav; background: @bg-nav-rgba;
-	border: 0 none;
-}
-.lw14-events-nav-item .lw14-events-nav-link:hover { color: @link-text; background: @bg-nav; background: @bg-nav-rgba; }
-.lw14-events-nav-item.active .lw14-events-nav-link,
-.lw14-events-nav-item.active .lw14-events-nav-link:hover { background: @bg-light; border: 0 none; }
-.lw14-events-nav-item:not( .active ) { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
 // Events Page
-.lw14-events-title { .emphasis-title(); }
+// .lw14-events-title { .emphasis-title(); }
 
-.lw14-events-upcoming {
-	background: @bg-light;
+// .lw14-events-upcoming {
+// 	background: @bg-light;
 
-	&-event {
-		padding-top: 40px;
+// 	&-event {
+// 		padding-top: 40px;
 
-		&-promo { height: 250px; }
-		&-title, &-date { .emphasis-title(); margin: 0; }
-		&-date { color: @secondary-text; }
-		&-text { margin-top: 20px; }
-	}
-}
+// 		&-promo { height: 250px; }
+// 		&-title, &-date { .emphasis-title(); margin: 0; }
+// 		&-date { color: @secondary-text; }
+// 		&-text { margin-top: 20px; }
+// 	}
+// }
 
-.lw14-events-regular {
-	color: @bg-light;
-	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.3 ); // makes the text stand out more (too thin w/out it)
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background: @bg-dark;
+// .lw14-events-regular {
+// 	color: @bg-light;
+// 	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.3 ); // makes the text stand out more (too thin w/out it)
+// 	.light-font-smoothing();
+// 	background: @bg-dark;
 
-	&-event {
-		padding-bottom: 40px;
+// 	&-event {
+// 		padding-bottom: 40px;
 
-		&-title { margin-top: 30px; margin-bottom: 0; }
-		&-title:first-child { margin-top: 0; }
-	}
-}
-
-// Sermons Page
-.lw14-sermons-content {
-	background: @bg-light;
-}
-
-.lw14-sermons-sermon {
-	padding-top: 40px;
-
-	&-title { margin: 0; }
-	&-meta { color: @secondary-text; font-family: 'montserratregular'; font-size: 75%; }
-	&-meta-link { margin-right: 20px; }
-}
+// 		&-title { margin-top: 30px; margin-bottom: 0; }
+// 		&-title:first-child { margin-top: 0; }
+// 	}
+// }
 
 @import 'lw14-base-small.less';
 @import 'lw14-base-medium.less';

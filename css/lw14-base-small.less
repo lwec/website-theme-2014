@@ -3,11 +3,15 @@
 body { font-size: 20px; }
 
 // all pages
-.lw14-nav-menu-item {
-	padding: 0 1em;
+.lw14-nav {
+	&-menu-item {
+		padding: 0 1em;
 
-	&:first-child { padding-left: 0; }
-	&:last-child { padding-right: 0; }
+		&:first-child { padding-left: 0; }
+		&:last-child { padding-right: 0; }
+	}
+
+	.navbar-inverse & &-menu-item-link { padding-top: 0; padding-bottom: 0; }
 }
 
 .jumbotron .lw14-page-title { padding-top: 80px; }

@@ -19,7 +19,12 @@ module.exports = function(grunt) {
 			},
 			lw14: {
 				src: [
-					'js/libraries/*.js',
+					'js/libraries/00-modernizr.js',
+					'js/libraries/02-placeholder.js',
+					'js/libraries/03-fastclick.js',
+					'js/libraries/04-jquery.cookie.js',
+					'js/libraries/05-jquery.stellar.js',
+					'js/libraries/bootstrap.js',
 					'js/lw14-global.js'
 				],
 				dest: 'dist/js/<%= pkg.name %>.js'
@@ -87,7 +92,7 @@ module.exports = function(grunt) {
 				options: {
 					banner: '/* Would God use this website to bring people to Him for His glory. */',
 					paths: [ 'css' ],
-					compress: true,
+					// compress: true,
 					strictImports: true,
 					outputSourceFiles: true,
 					sourceMap: true,
