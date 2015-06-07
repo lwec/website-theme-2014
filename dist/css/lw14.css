@@ -116,6 +116,18 @@ p {
   font-family: 'pt_serifregular';
   background: #222222;
 }
+.lw14-bible-passage {
+  margin-bottom: 1em;
+}
+.lw14-bible-passage-quote {
+  margin-bottom: 0;
+  color: #807553;
+  font-family: 'pt_serifitalic';
+}
+.lw14-bible-passage-verse {
+  display: inline-block;
+  color: #808080;
+}
 .lw14-nav-container {
   margin-bottom: 0;
   background: rgba(22, 22, 22, 0.9);
@@ -371,8 +383,20 @@ p {
 .lw14-landing-staff-text {
   margin-bottom: 1em;
 }
+.lw14-landing-staff-normanchung .lw14-landing-staff-photo {
+  background-image: url('../img/landing-staff-normanchung.jpg');
+}
+.lw14-landing-staff-barrygin .lw14-landing-staff-photo {
+  background-image: url('../img/landing-staff-barrygin.jpg');
+}
 .lw14-landing-staff-tonychon .lw14-landing-staff-photo {
   background-image: url('../img/landing-staff-tonychon.jpg');
+}
+.lw14-landing-staff-huilichang .lw14-landing-staff-photo {
+  background-image: url('../img/landing-staff-huilichang.jpg');
+}
+.lw14-landing-staff-ruthhuang .lw14-landing-staff-photo {
+  background-image: url('../img/landing-staff-ruthhuang.jpg');
 }
 @media only screen and (min-width: 768px) {
   .lw14-living-water-evangelical-church-intro {

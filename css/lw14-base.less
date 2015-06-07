@@ -11,6 +11,7 @@
 @bg-nav-rgba: rgba( 22, 22, 22, 0.9 );
 @default-text: #545454;
 @secondary-text: #aaa;
+@description-text: #808080;
 @link-text: #1f87e8;
 @link-text-hover: #1652a3;
 
@@ -53,6 +54,14 @@ a:hover, a:focus { color: @link-text-hover; text-decoration: none; }
 p { text-rendering: optimizelegibility; }
 .lw14 { color: @default-text; font-family: 'pt_serifregular'; background: @bg-nav; }
 
+.lw14-bible-passage {
+	margin-bottom: 1em;
+
+	&-quote { margin-bottom: 0; color: #807553; font-family: 'pt_serifitalic'; }
+	&-verse { display: inline-block; color: @description-text; }
+}
+
+// layout styles
 .lw14-nav-container { margin-bottom: 0; background: @bg-nav-rgba; }
 .lw14-nav {
 	background: transparent;
