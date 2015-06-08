@@ -82,7 +82,7 @@ p { text-rendering: optimizelegibility; }
 	&-menu-item-link:hover { text-shadow: 0 0 10px rgba( 255, 255, 255, 0.8 ); }
 }
 
-.lw14-tab-nav {
+.lw14-nav-tabs {
 	margin-top: -50px;
 	.emphasis-title();
 	text-align: center;
@@ -90,7 +90,7 @@ p { text-rendering: optimizelegibility; }
 
 	.nav-tabs { border-bottom: 0; }
 
-	li { margin-bottom: 0; } // override bootstrap
+	li { margin-bottom: 0; margin-right: 10px; } // override bootstrap
 	li a {
 		color: @bg-light;
 		background: @bg-nav; background: @bg-nav-rgba;
@@ -101,6 +101,9 @@ p { text-rendering: optimizelegibility; }
 	li.active a:hover { background: @bg-light; border: 0 none; }
 	li:not( .active ) { .light-font-smoothing(); }
 }
+
+.lw14-content .form-item,
+.lw14-content .form-actions { margin-top: 0; margin-bottom: 0; padding-top: 1em; padding-bottom: 1em; }
 
 .lw14-page-intro {
 	margin-bottom: 0;

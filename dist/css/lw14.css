@@ -163,7 +163,7 @@ p {
 .lw14-nav-menu-item-link:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-.lw14-tab-nav {
+.lw14-nav-tabs {
   margin-top: -50px;
   font-family: 'montserratregular';
   letter-spacing: 0.1em;
@@ -171,31 +171,39 @@ p {
   text-align: center;
   border-bottom: 0 none;
 }
-.lw14-tab-nav .nav-tabs {
+.lw14-nav-tabs .nav-tabs {
   border-bottom: 0;
 }
-.lw14-tab-nav li {
+.lw14-nav-tabs li {
   margin-bottom: 0;
+  margin-right: 10px;
 }
-.lw14-tab-nav li a {
+.lw14-nav-tabs li a {
   color: #fafbfc;
   background: #222222;
   background: rgba(22, 22, 22, 0.9);
   border: 0 none;
 }
-.lw14-tab-nav li a:hover {
+.lw14-nav-tabs li a:hover {
   color: #1f87e8;
   background: #222222;
   background: rgba(22, 22, 22, 0.9);
 }
-.lw14-tab-nav li.active a,
-.lw14-tab-nav li.active a:hover {
+.lw14-nav-tabs li.active a,
+.lw14-nav-tabs li.active a:hover {
   background: #fafbfc;
   border: 0 none;
 }
-.lw14-tab-nav li:not( .active ) {
+.lw14-nav-tabs li:not( .active ) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.lw14-content .form-item,
+.lw14-content .form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .lw14-page-intro {
   padding-top: 50px;
@@ -267,6 +275,9 @@ p {
   .jumbotron .lw14-page-title {
     padding-top: 80px;
   }
+  .lw14-nav-tab {
+    font-size: 16px;
+  }
 }
 @media only screen and (min-width: 992px) {
   body {
@@ -291,9 +302,6 @@ p {
     padding-top: 120px;
     font-size: 2em;
   }
-  .lw14-tab-nav {
-    margin-top: -60px;
-  }
 }
 .lw14-landing-title {
   font-family: 'pt_serifitalic';
@@ -306,6 +314,10 @@ p {
 .lw14-living-water-evangelical-church-intro {
   background: #fafbfc url('../img/landing-intro-bg-2-mobile.jpg') no-repeat scroll center center;
   background-size: cover;
+}
+.lw14-user-account-intro,
+.lw14-sermons-archive-intro {
+  min-height: 0;
 }
 .lw14-landing-about {
   color: #fafbfc;
