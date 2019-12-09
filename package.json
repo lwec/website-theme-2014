@@ -21,6 +21,6 @@
     "grunt-contrib-qunit": "^2.0.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.13"
   }
 }
